@@ -3,7 +3,8 @@ import { withTheme } from '@material-ui/core/styles';
 import NavBar from './NavBar'
 
 const Layout = ({
-  theme
+  theme,
+  children
 }) => {
   const styles = {
     layout: {
@@ -14,6 +15,7 @@ const Layout = ({
   return(
     <div style={styles.layout}>
       <NavBar />
+      {children}
     </div>
   )
 }
