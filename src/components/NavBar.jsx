@@ -39,22 +39,17 @@ const NavBar = ({
           <Typography className={classes.appTitle} variant="title" color="inherit">
             Armageddon MUD Skills & Guilds
           </Typography>
-          <NavLink to="/" className={classes.link} activeClassName={classes.activeLink} exact>
-            <Button color="inherit">
-              Index
-            </Button>
-          </NavLink>
-          <NavLink to="/guild-picker/" className={classes.link} activeClassName={classes.activeLink} exact>
+          <NavLink to="/arma-guild-picker/" className={classes.link} activeClassName={classes.activeLink} exact>
             <Button color="inherit">
               Guild Picker
             </Button>
           </NavLink>
-          <NavLink to="/guild-compare/" className={classes.link} activeClassName={classes.activeLink} exact>
+          <NavLink to="/arma-guild-picker/guild-compare/" className={classes.link} activeClassName={classes.activeLink} exact>
             <Button color="inherit">
               Guild Compare
             </Button>
           </NavLink>
-          <NavLink to="/skill-picker/" className={classes.link} activeClassName={classes.activeLink} exact>
+          <NavLink to="/arma-guild-picker/skill-picker/" className={classes.link} activeClassName={classes.activeLink} exact>
             <Button color="inherit">
               Skill Picker
             </Button>

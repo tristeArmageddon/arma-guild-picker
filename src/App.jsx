@@ -15,10 +15,10 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <Router>
         <Layout>
-          <Route path="/" exact component={Index} />
-          <Route path="/guild-picker/" component={GuildPicker} />
-          <Route path="/guild-compare/" component={GuildCompare} />
-          <Route path="/skill-picker/" component={SkillPicker} />
+          <Route path="/arma-guild-picker/" exact component={GuildPicker} />
+          <Route path="/arma-guild-picker/guild-picker/" component={GuildPicker} />
+          <Route path="/arma-guild-picker/guild-compare/" component={GuildCompare} />
+          <Route path="/arma-guild-picker/skill-picker/" component={SkillPicker} />
         </Layout>
       </Router>
     </MuiThemeProvider>
