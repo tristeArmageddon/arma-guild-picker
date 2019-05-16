@@ -41,7 +41,7 @@
       "hidecity":"Hide (City)",
       "hidewild":"Hide (Wild)",
       "sneakcity":"Sneak (City)",
-      "sneakwild":"Sneak (Wild)",
+      "sneakwild":"Sneak (Wild)"
     },
     "manipulation":{
       "bandage":"Bandage",
@@ -63,15 +63,15 @@
       "peek":"Peek",
       "scan":"Scan",
       "search":"Search",
-      "watch":"Watch",
+      "watch":"Watch"
     },
     "languages":{
       "allundean":"Allundean",
       "bendune":"Bendune",
       "cavilish":"Cavilish",
-      "mirukkim":"Mirukkim",
+      "mirukkim":"Mirukkim"
     },
-     "crafting":{
+    "crafting":{
       "armormaking":"Armor Making",
       "armorrepair":"Armor Repair",
       "axemaking":"Axe making",
@@ -100,7 +100,7 @@
       "tentmaking":"Tent making",
       "toolmaking":"Toolmaking",
       "wagonmaking":"Wagonmaking",
-      "woodworking":"Woodworking",
+      "woodworking":"Woodworking"
     },
     "barter":{
       "haggle":"Haggle",
@@ -167,7 +167,7 @@
         "blowgunuse":"poisoning",
         "subdue":"flee",
         "pick":"sleightofhand",
-        "pickmaking":"pick",
+        "pickmaking":"pick"
       }
     },
     "miscreant":{
@@ -532,6 +532,8 @@
         "tanning":"toolmaking",
         "leatherworking":"toolmaking",
         "instrumentmaking":"toolmaking"
+
+     }
     }
   },
   "subguilds": {
@@ -1140,7 +1142,7 @@
       "languages":[],
       "mastercraft":[],
       "master":[],
-      "advanced":["watch","sneakcity",],
+      "advanced":["watch","sneakcity"],
       "journeyman":["pick"],
       "exmaster":[],
       "exadvanced":["scan","hidecity"],
@@ -1276,7 +1278,7 @@
       "exjourneyman":[],
       "exapprentice":[],
       "branching": {}
-    },
+    }
   },
   "proficiencies": [
     "novice",
