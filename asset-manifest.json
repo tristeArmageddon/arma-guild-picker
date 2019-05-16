@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/arma-guild-picker/static/css/main.6dcaecb9.chunk.css",
+    "main.js": "/arma-guild-picker/static/js/main.5d2d0dcf.chunk.js",
+    "main.js.map": "/arma-guild-picker/static/js/main.5d2d0dcf.chunk.js.map",
+    "runtime~main.js": "/arma-guild-picker/static/js/runtime~main.c1229b97.js",
+    "runtime~main.js.map": "/arma-guild-picker/static/js/runtime~main.c1229b97.js.map",
+    "static/js/2.2ea4c4b9.chunk.js": "/arma-guild-picker/static/js/2.2ea4c4b9.chunk.js",
+    "static/js/2.2ea4c4b9.chunk.js.map": "/arma-guild-picker/static/js/2.2ea4c4b9.chunk.js.map",
+    "index.html": "/arma-guild-picker/index.html",
+    "precache-manifest.11301c94430108ce4b03295a749ed0f7.js": "/arma-guild-picker/precache-manifest.11301c94430108ce4b03295a749ed0f7.js",
+    "service-worker.js": "/arma-guild-picker/service-worker.js",
+    "static/css/main.6dcaecb9.chunk.css.map": "/arma-guild-picker/static/css/main.6dcaecb9.chunk.css.map"
+  }
+}
