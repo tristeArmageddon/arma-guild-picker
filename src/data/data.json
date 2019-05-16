@@ -61,7 +61,8 @@
       "listenwild":"Listen (Wild)",
       "listencity":"Listen (City)",
       "peek":"Peek",
-      "scan":"Scan",
+      "scanwild":"Scan (Wild)",
+      "scancity":"Scan (City)",
       "search":"Search",
       "watch":"Watch"
     },
@@ -118,7 +119,11 @@
     "alcoholtolerance":"Increased tolerance for alcohol",
     "paintolerance":"Increased tolerance for pain",
     "tamemount":"May eventually tame mounts",
-    "wildquit":"Wilderness quit"
+    "wildquit":"Wilderness quit",
+    "rukkian": "Rukkian (Earth) Magick",
+    "sukkrathi": "Suk-Krathi (Fire) Magick",
+    "vivaduan": "Vivaduan (Water) Magick",
+    "whiran": "Whiran (Wind) Magick"
   },
   "guilds": {
     "enforcer":{
@@ -156,12 +161,12 @@
       "advanced":["flee","parry","sap","shielduse","slashingweapons","piercingweapons","choppingweapons","bludgeoningweapons","sneakcity","hidecity","climb","poisoning","sleightofhand","huntcity","listencity","search","watch","forage","value","cooking"],
       "journeyman":[],
       "exmaster":["expel","blowgunuse"],
-      "exadvanced":["bash","blindfighting","pick","peek","scan"],
+      "exadvanced":["bash","blindfighting","pick","peek","scancity"],
       "exjourneyman":["subdue","pickmaking"],
       "branching":{
         "expel":"barrier",
         "peek":"sneakcity",
-        "scan":"hidecity",
+        "scancity":"hidecity",
         "bash":"parry",
         "blindfighting":"parry",
         "blowgunuse":"poisoning",
@@ -176,7 +181,7 @@
       "perks":["foragefoodcity"],
       "languages":[],
       "mastercraft":[],
-      "master":["contact","barrier","sneakcity","hidecity","climb","pick","poisoning","sleightofhand","steal","huntcity","listencity","peek","scan","search","watch","forage"],
+      "master":["contact","barrier","sneakcity","hidecity","climb","pick","poisoning","sleightofhand","steal","huntcity","listencity","peek","scancity","search","watch","forage"],
       "advanced":["crossbowuse","flee","parry","throw","shielduse","dualwield","twohanded","piercingweapons","bludgeoningweapons","cooking"],
       "journeyman":[],
       "exmaster":["expel"],
@@ -200,7 +205,7 @@
       "perks":[],
       "languages":[],
       "master":["contact","barrier","value","clothworking","dyeing","knifemaking","stonecrafting","toolmaking","cooking"],
-      "advanced":["crossbowuse","throw","dualwield","twohanded","hidecity","climb","steal","huntcity","listencity","peek","scan","watch","forage","pickmaking"],
+      "advanced":["crossbowuse","throw","dualwield","twohanded","hidecity","climb","steal","huntcity","listencity","peek","scancity","watch","forage","pickmaking"],
       "journeyman":["flee","shielduse","piercingweapons","bludgeoningweapons"],
       "exmaster":["expel","sleightofhand","haggle","bowmaking","brew","clayworking","clubmaking","fletchery","jewelrymaking"],
       "exadvanced":["sneakcity","pick","search"],
@@ -264,7 +269,7 @@
       "advanced":["subdue","climb","listenwild","ride","directionsense"],
       "journeyman":["forage","cooking"],
       "exmaster":["expel","blindfighting","crossbowuse","charge","disarm","guarding","throw"],
-      "exadvanced":["sneakwild","hidewild","scan"],
+      "exadvanced":["sneakwild","hidewild","scanwild"],
       "exjourneyman":[],
       "branching":{
         "expel":"barrier",
@@ -276,7 +281,7 @@
         "sneakwild":"climb",
         "hidewild":"climb",
         "charge":"ride",
-        "scan":"directionsense"
+        "scanwild":"directionsense"
       }
     },
     "scout":{
@@ -286,7 +291,7 @@
       "languages":[],
       "mastercraft":[],
       "master":["contact","barrier","archery","slinguse","throw","dualwield","twohanded","skinning"],
-      "advanced":["flee","parry","shielduse","slashingweapons","piercingweapons","choppingweapons","bludgeoningweapons","climb","bandage","poisoning","ride","directionsense","huntwild","listenwild","scan","forage","fletchery","cooking"],
+      "advanced":["flee","parry","shielduse","slashingweapons","piercingweapons","choppingweapons","bludgeoningweapons","climb","bandage","poisoning","ride","directionsense","huntwild","listenwild","scanwild","forage","fletchery","cooking"],
       "journeyman":[],
       "exmaster":["expel","blowgunuse","crossbowuse","guarding","rescue"],
       "exadvanced":["blindfighting","charge","kick","sneakwild","hidewild","bandagemaking"],
@@ -301,7 +306,7 @@
         "blindfighting":"parry",
         "sneakwild":"climb",
         "bandagemaking":"bandage",
-        "hidewild":"scan",
+        "hidewild":"scanwild",
         "charge":"ride"
       }
     },
@@ -311,7 +316,7 @@
       "perks":["foragefoodwild","wildquit","goodrecovery","hitchdouble","tamemount"],
       "languages":[],
       "mastercraft":[],
-      "master":["contact","barrier","sneakwild","hidewild","climb","bandage","poisoning","skinning","ride","directionsense","huntwild","listenwild","scan","watch","forage"],
+      "master":["contact","barrier","sneakwild","hidewild","climb","bandage","poisoning","skinning","ride","directionsense","huntwild","listenwild","scanwild","watch","forage"],
       "advanced":["archery","crossbowuse","flee","parry","throw","shielduse","dualwield","twohanded","piercingweapons","bludgeoningweapons","cooking"],
       "journeyman":[],
       "exmaster":["expel"],
@@ -339,7 +344,7 @@
       "languages":[],
       "mastercraft":[],
       "master":["contact","barrier","pilot","skinning","armorrepair","bandagemaking","fletchery","lumberjacking","spearmaking","toolmaking","cooking"],
-      "advanced":["archery","dualwield","twohanded","sneakwild","climb","ride","directionsense","huntwild","listenwild","scan","forage"],
+      "advanced":["archery","dualwield","twohanded","sneakwild","climb","ride","directionsense","huntwild","listenwild","scanwild","forage"],
       "journeyman":["flee","shielduse","piercingweapons","bludgeoningweapons"],
       "exmaster":["expel","brew","bowmaking","floristry","knifemaking","leatherworking","tanning","tentmaking"],
       "exadvanced":["crossbowuse","rescue","hidewild","bandage","search"],
@@ -347,8 +352,8 @@
       "branching":{
         "expel":"barrier",
         "crossbowuse":"archery",
-        "hidewild":"scan",
-        "search":"scan",
+        "hidewild":"scanwild",
+        "search":"scanwild",
         "parry":"flee",
         "rescue":"parry",
         "bowmaking":"fletchery",
@@ -368,14 +373,14 @@
       "languages":["bendune"],
       "mastercraft":[],
       "master":["contact","barrier","pilot","haggle","value","axemaking","basketweaving","bowmaking","dyeing","fletchery","lumberjacking","spearmaking","tentmaking","toolmaking","cooking"],
-      "advanced":["skinning","ride","directionsense","scan"],
+      "advanced":["skinning","ride","directionsense","scanwild"],
       "journeyman":["shielduse","dualwield","twohanded","forage"],
       "exmaster":["expel","armormaking","armorrepair","bandagemaking","brew","clothworking","clubmaking","featherworking","floristry","instrumentmaking","jewelrymaking","knifemaking","leatherworking","stonecrafting","tanning","woodworking"],
       "exadvanced":["listenwild"],
       "exjourneyman":["archery","crossbowuse","piercingweapons"],
       "branching":{
         "expel":"barrier",
-        "listenwild":"scan",
+        "listenwild":"scanwild",
         "tanning":"skinning",
         "featherworking":"skinning",
         "leatherworking":"skinning",
@@ -451,7 +456,7 @@
       "perks":["alcoholtolerance","paintolerance"],
       "languages":[],
       "mastercraft":[],
-      "master":["contact","barrier","bandage","listencity","scan","watch","forage"],
+      "master":["contact","barrier","bandage","listencity","scancity","watch","forage"],
       "advanced":["crossbowuse","flee","guarding","kick","parry","rescue","slinguse","shielduse","dualwield","twohanded","slashingweapons","piercingweapons","choppingweapons","bludgeoningweapons","armorrepair","bandagemaking","fletchery","knifemaking","lumberjacking","toolmaking","cooking"],
       "journeyman":[],
       "exmaster":["expel"],
@@ -672,6 +677,19 @@
       "exjourneyman":[],
       "exapprentice":[],
       "branching":{}
+    },
+    "grebber": {
+      "label":"Grebber",
+      "karma":1,
+      "perks":["foragefoodwild","foragefoodcity"],
+      "languages":[],
+      "advanced":["huntcity","huntwild","forage","riding","directionsense"],
+      "exadvanced":["climb","search"],
+      "branching":{
+        "climb":"huntcity",
+        "climb":"huntwild",
+        "search":"forage"
+      }
     },
     "guard":{
       "label":"Guard",
@@ -1089,7 +1107,7 @@
       "languages":[],
       "mastercraft":[],
       "master":[],
-      "advanced":["sleightofhand","scan","listencity","watch","haggle"],
+      "advanced":["sleightofhand","scancity","listencity","watch","haggle"],
       "journeyman":["steal"],
       "exmaster":[],
       "exadvanced":[],
@@ -1109,11 +1127,11 @@
       "advanced":["archery","sneakwild","hidewild","skinning","directionsense"],
       "journeyman":[],
       "exmaster":[],
-      "exadvanced":["scan"],
+      "exadvanced":["scanwild"],
       "exjourneyman":["huntwild"],
       "exapprentice":[],
       "branching": {
-        "scan":"hidewild",
+        "scanwild":"hidewild",
         "huntwild":"skinning"
       }
     },
@@ -1145,11 +1163,11 @@
       "advanced":["watch","sneakcity"],
       "journeyman":["pick"],
       "exmaster":[],
-      "exadvanced":["scan","hidecity"],
+      "exadvanced":["scancity","hidecity"],
       "exjourneyman":[],
       "exapprentice":[],
       "branching": {
-        "scan":"watch",
+        "scancity":"watch",
         "hidecity":"sneakcity"
       }
     },
@@ -1278,6 +1296,61 @@
       "exjourneyman":[],
       "exapprentice":[],
       "branching": {}
+    },
+    "touchedrukkian": {
+      "label":"Touched Rukkian",
+      "karma":1,
+      "perks":["foragefoodwild", "rukkian"],
+      "languages":[],
+      "mastercraft":[],
+      "master":[],
+      "advanced":["forage"],
+      "journeyman":["climb"],
+      "exadvanced":["stonecrafting","jewelrymaking"],
+      "exjourneyman":["huntwild"],
+      "branching":{
+        "stonecrafting":"forage",
+        "jewelrymaking":"stonecrafting",
+        "huntwild":"climb"
+      }
+    },
+    "touchedsukkrathi": {
+      "label":"Touched Suk-Krathi",
+      "karma":1,
+      "perks":["languagebonus","paintolerance","sukkrathi"],
+      "languages":["sirihish","allundean","mirukkim"],
+      "master":["cooking"],
+      "exadvanced":["clayworking"],
+      "branching":{
+        "clayworking":"cooking"
+      }
+    },
+    "touchedvivaduan":{
+      "label":"Touched Vivaduan",
+      "karma":1,
+      "perks":["vivaduan","alcoholtolerance","foragefoodwild","foragefoodcity"],
+      "languages":[],
+      "advanced":["bandage","forage"],
+      "exadvanced":["brew","floristry"],
+      "branching":{
+        "brew":"brandage",
+        "floristry":"forage"
+      }
+    },
+    "touchedwhiran":{
+      "label":"Touched Whiran",
+      "karma":1,
+      "perks":[],
+      "languages":[],
+      "advanced":["listencity","listenwild","directionsense"],
+      "journeyman":["hidecity","hidewild"],
+      "exadvanced":["sneakcity","sneakwild","scancity","scanwild"],
+      "branching":{
+        "sneakcity":"hidecity",
+        "scancity":"hidecity",
+        "sneakwild":"hidewild",
+        "scanwild":"hidewild"
+      }
     }
   },
   "proficiencies": [
