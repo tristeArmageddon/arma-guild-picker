@@ -39,28 +39,43 @@ class GuildPicker extends Component {
     }
   }
 
+  skillsToObj({
+    guildGroup,
+    guildKey,
+    proficiency,
+    result = {},
+    extended = false
+  }) {
+    const proficiencyKey = `${extended ? 'ex': ''}${proficiency}`;
+    if (data[guildGroup] && data[guildGroup][guildKey][proficiencyKey]) {
+      data[guildGroup][guildKey][proficiencyKey].forEach(sk => {
+        const {
+          group,
+          label,
+        } = this.findGroupAndLabel(sk);
+        result[sk] = {
+          [`${guildGroup}Skill`]: label,
+          [`${guildGroup}SkillLevel`]: proficiency,
+          group,
+          branchesFrom: extended && data[guildGroup][guildKey].branching[sk],
+          ...result[sk],
+        }
+      })
+    }
+    return result;
+  }
+
   mungeSkills() {
     const {
       guild,
       subguild,
     } = this.state;
-    const result = {};
+    let result = {};
     for (let proficiency of data.proficiencies) {
       for (let guildGroup of ['guilds', 'subguilds']) {
         const guildKey = guildGroup == 'guilds' ? guild : subguild;
-        if (data[guildGroup] && data[guildGroup][guildKey][proficiency]) {
-          data[guildGroup][guildKey][proficiency].forEach(sk => {
-            const {
-              group,
-              label,
-            } = this.findGroupAndLabel(sk);
-            result[sk] = {
-              [`${guildGroup}Skill`]: label,
-              [`${guildGroup}SkillLevel`]: proficiency,
-              group,
-              ...result[sk],
-            }
-          })
+        for (let extended of [true, false]) {
+          result = this.skillsToObj({result, guildGroup, guildKey, proficiency, extended})
         }
       }
     }
