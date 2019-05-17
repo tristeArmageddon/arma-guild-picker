@@ -15,8 +15,20 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Grid from '@material-ui/core/Grid';
 
-const styles = (theme) => ({});
+const styles = (theme) => ({
+  cell: {
+    [theme.breakpoints.down('xs')]: {
+      padding: 4,
+      fontSize: '0.65rem',
+      maxWidth: 65,
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: 8,
+    },
+  }
+});
 class GuildPicker extends Component {
   state = {
     guild: 'enforcer',
@@ -91,60 +103,62 @@ class GuildPicker extends Component {
       subguild,
     } = this.state;
     return (
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <FormControl className={classes.formControl}>
-                  <Select
-                    value={this.state.guild}
-                    onChange={this.toggleSelection}
-                    inputProps={{
-                      name: 'guild',
-                      id: 'guild-select',
-                    }}
-                  >
-                    {Object.keys(data.guilds).map(guildKey => (
-                      <MenuItem value={guildKey}>{data.guilds[guildKey].label}</MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </TableCell>
-              <TableCell/>
-              <TableCell>
-                <FormControl className={classes.formControl}>
-                  <Select
-                    value={this.state.subguild}
-                    onChange={this.toggleSelection}
-                    inputProps={{
-                      name: 'subguild',
-                      id: 'subguild-select',
-                    }}
-                  >
-                    {Object.keys(data.subguilds).map(subguildKey => (
-                      <MenuItem value={subguildKey}>{data.subguilds[subguildKey].label}</MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </TableCell>
-              <TableCell/>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {this.mungeSkills().map(row => (
-              <TableRow key={row.id}>
-                <TableCell component="th" scope="row">
-                  {row.guildsSkill}
+      <Grid item xs={12}>
+        <Paper className={classes.root}>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <TableCell className={classes.cell}>
+                  <FormControl className={classes.formControl}>
+                    <Select
+                      value={this.state.guild}
+                      onChange={this.toggleSelection}
+                      inputProps={{
+                        name: 'guild',
+                        id: 'guild-select',
+                      }}
+                    >
+                      {Object.keys(data.guilds).map(guildKey => (
+                        <MenuItem value={guildKey}>{data.guilds[guildKey].label}</MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
                 </TableCell>
-                <TableCell>{row.guildsSkillLevel}</TableCell>
-                <TableCell>{row.subguildsSkill}</TableCell>
-                <TableCell>{row.subguildsSkillLevel}</TableCell>
+                <TableCell className={classes.cell}/>
+                <TableCell className={classes.cell}>
+                  <FormControl className={classes.formControl}>
+                    <Select
+                      value={this.state.subguild}
+                      onChange={this.toggleSelection}
+                      inputProps={{
+                        name: 'subguild',
+                        id: 'subguild-select',
+                      }}
+                    >
+                      {Object.keys(data.subguilds).map(subguildKey => (
+                        <MenuItem value={subguildKey}>{data.subguilds[subguildKey].label}</MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </TableCell>
+                <TableCell className={classes.cell}/>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </Paper>
+            </TableHead>
+            <TableBody>
+              {this.mungeSkills().map(row => (
+                <TableRow key={row.id}>
+                  <TableCell className={classes.cell} component="th" scope="row">
+                    {row.guildsSkill}
+                  </TableCell>
+                  <TableCell className={classes.cell}>{row.guildsSkillLevel}</TableCell>
+                  <TableCell className={classes.cell}>{row.subguildsSkill}</TableCell>
+                  <TableCell className={classes.cell}>{row.subguildsSkillLevel}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </Paper>
+      </Grid>
     );
   }
 }

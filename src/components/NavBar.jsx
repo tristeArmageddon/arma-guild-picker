@@ -12,7 +12,11 @@ const styles = (theme) => ({
     ...theme.appBar
   },
   appTitle: {
-    paddingRight: 32
+    paddingRight: 32,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 12,
+      paddingRight: 12,
+    }
   },
   link: {
     textDecoration: 'none',
@@ -21,8 +25,11 @@ const styles = (theme) => ({
     '&>button': {
       fontWeight: 600,
       margin: '0 4px',
-      padding: '4px'
-    }
+      padding: '4px',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: 10,
+      }
+    },
   },
   activeLink: {
     opacity: 1,
