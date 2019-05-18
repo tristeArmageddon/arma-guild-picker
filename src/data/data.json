@@ -678,19 +678,6 @@
       "exapprentice":[],
       "branching":{}
     },
-    "grebber": {
-      "label":"Grebber",
-      "karma":1,
-      "perks":["foragefoodwild","foragefoodcity"],
-      "languages":[],
-      "advanced":["huntcity","huntwild","forage","riding","directionsense"],
-      "exadvanced":["climb","search"],
-      "branching":{
-        "climb":"huntcity",
-        "climb":"huntwild",
-        "search":"forage"
-      }
-    },
     "guard":{
       "label":"Guard",
       "karma":0,
@@ -994,6 +981,19 @@
       "exjourneyman":[],
       "exapprentice":[],
       "branching":{}
+    },
+    "grebber": {
+      "label":"Grebber",
+      "karma":1,
+      "perks":["foragefoodwild","foragefoodcity"],
+      "languages":[],
+      "advanced":["huntcity","huntwild","forage","riding","directionsense"],
+      "exadvanced":["climb","search"],
+      "branching":{
+        "climb":"huntcity",
+        "climb":"huntwild",
+        "search":"forage"
+      }
     },
     "masterarmorsmith":{
       "label":"Master Armorsmith",
