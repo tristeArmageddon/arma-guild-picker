@@ -16,17 +16,16 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Grid from '@material-ui/core/Grid';
+import SkillCompareTable from './SkillCompareTable';
+import PerkCompareTable from './PerkCompareTable';
 
 const styles = (theme) => ({
-  cell: {
-    [theme.breakpoints.down('xs')]: {
-      padding: 4,
-      fontSize: '0.65rem',
-      maxWidth: 65,
-    },
-    [theme.breakpoints.down('sm')]: {
-      padding: 8,
-    },
+  container: {
+    flexGrow: 1,
+  },
+  formControl: {
+    width: 'calc(100% - 1rem)',
+    marginRight: '1rem',
   }
 });
 class GuildPicker extends Component {
@@ -39,61 +38,6 @@ class GuildPicker extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  findGroupAndLabel(skillKey) {
-    for (let group of Object.keys(data.skills)) {
-      const foundSkill = Object.keys(data.skills[group]).find((k) => k === skillKey)
-      if (foundSkill) {
-        return {
-          group,
-          label: data.skills[group][foundSkill],
-        }
-      }
-    }
-  }
-
-  skillsToObj({
-    guildGroup,
-    guildKey,
-    proficiency,
-    result = {},
-    extended = false
-  }) {
-    const proficiencyKey = `${extended ? 'ex': ''}${proficiency}`;
-    if (data[guildGroup] && data[guildGroup][guildKey][proficiencyKey]) {
-      data[guildGroup][guildKey][proficiencyKey].forEach(sk => {
-        const {
-          group,
-          label,
-        } = this.findGroupAndLabel(sk);
-        result[sk] = {
-          [`${guildGroup}Skill`]: label,
-          [`${guildGroup}SkillLevel`]: proficiency,
-          group,
-          branchesFrom: extended && data[guildGroup][guildKey].branching[sk],
-          ...result[sk],
-        }
-      })
-    }
-    return result;
-  }
-
-  mungeSkills() {
-    const {
-      guild,
-      subguild,
-    } = this.state;
-    let result = {};
-    for (let proficiency of data.proficiencies) {
-      for (let guildGroup of ['guilds', 'subguilds']) {
-        const guildKey = guildGroup == 'guilds' ? guild : subguild;
-        for (let extended of [true, false]) {
-          result = this.skillsToObj({result, guildGroup, guildKey, proficiency, extended})
-        }
-      }
-    }
-    return Object.values(result);
-  }
-
   render() {
     const {
       classes
@@ -102,69 +46,72 @@ class GuildPicker extends Component {
       guild,
       subguild,
     } = this.state;
+    const tableConfig = {
+      g1Label: "Guild",
+      g2Label: "Subguild",
+      g1Key: "guild",
+      g2Key: "subguild",
+      g1Value: guild,
+      g2Value: subguild,
+    };
     return (
-      <Grid item xs={12}>
-        <Paper className={classes.root}>
-          <Table className={classes.table}>
-            <TableHead>
-              <TableRow>
-                <TableCell className={classes.cell}>
-                  <FormControl className={classes.formControl}>
-                    <Select
-                      value={this.state.guild}
-                      onChange={this.toggleSelection}
-                      inputProps={{
-                        name: 'guild',
-                        id: 'guild-select',
-                      }}
-                    >
-                      {Object.keys(data.guilds).map(guildKey => (
-                        <MenuItem value={guildKey}>
-                          {data.guilds[guildKey].label}
-                          {data.guilds[guildKey].karma ? ` (${data.guilds[guildKey].karma})` : ''}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                </TableCell>
-                <TableCell className={classes.cell}/>
-                <TableCell className={classes.cell}>
-                  <FormControl className={classes.formControl}>
-                    <Select
-                      value={this.state.subguild}
-                      onChange={this.toggleSelection}
-                      inputProps={{
-                        name: 'subguild',
-                        id: 'subguild-select',
-                      }}
-                    >
-                      {Object.keys(data.subguilds).map(subguildKey => (
-                        <MenuItem value={subguildKey}>
-                          {data.subguilds[subguildKey].label}
-                          {data.subguilds[subguildKey].karma ? ` (${data.subguilds[subguildKey].karma})` : ''}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                </TableCell>
-                <TableCell className={classes.cell}/>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {this.mungeSkills().map(row => (
-                <TableRow key={row.id}>
-                  <TableCell className={classes.cell} component="th" scope="row">
-                    {row.guildsSkill}
-                  </TableCell>
-                  <TableCell className={classes.cell}>{row.guildsSkillLevel}</TableCell>
-                  <TableCell className={classes.cell}>{row.subguildsSkill}</TableCell>
-                  <TableCell className={classes.cell}>{row.subguildsSkillLevel}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </Paper>
-      </Grid>
+      <>
+        <Grid container justify="center" spacing={6} className={classes.container}>
+          <Grid item xs={12} sm={6}>
+            <FormHelperText>Guild</FormHelperText>
+            <FormControl className={classes.formControl}>
+              <Select
+                value={this.state.guild}
+                onChange={this.toggleSelection}
+                inputProps={{
+                  name: 'guild',
+                  id: 'guild-select',
+                }}
+              >
+                {Object.keys(data.guilds).map(gKey => (
+                  <MenuItem value={gKey}>
+                    {data.guilds[gKey].label}
+                    {data.guilds[gKey].karma ? ` (${data.guilds[gKey].karma})` : ''}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormHelperText>Subguild</FormHelperText>
+            <FormControl className={classes.formControl}>
+              <Select
+                className={classes.select}
+                value={this.state.subguild}
+                onChange={this.toggleSelection}
+                inputProps={{
+                  name: 'subguild',
+                  id: 'subguild-select',
+                }}
+              >
+                {Object.keys(data.subguilds).map(gKey => (
+                  <MenuItem value={gKey}>
+                    {data.subguilds[gKey].label}
+                    {data.subguilds[gKey].karma ? ` (${data.subguilds[gKey].karma})` : ''}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+        </Grid>
+        <Grid container justify="center" spacing={6} className={classes.container}>
+          <Grid xs={12} sm={6}>
+            <SkillCompareTable
+              {...tableConfig}
+            />
+          </Grid>
+          <Grid xs={12} sm={6}>
+            <PerkCompareTable
+              {...tableConfig}
+            />
+          </Grid>
+        </Grid>
+      </>
     );
   }
 }

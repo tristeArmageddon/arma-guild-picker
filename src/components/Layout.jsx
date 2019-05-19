@@ -9,7 +9,6 @@ const Layout = ({
 }) => {
   const styles = {
     layout: {
-      height: '100vh',
       backgroundColor: theme.palette.background.default,
     }
   }
