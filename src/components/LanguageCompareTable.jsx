@@ -36,24 +36,24 @@ const styles = (theme) => ({
     width: '100%'
   }
 });
-class PerkCompareTable extends Component {
-  perksToObj({
+class LanguageCompareTable extends Component {
+  languagesToObj({
     guildGroup,
     gSelected,
     result = {},
   }) {
-    if (data[guildGroup] && data[guildGroup][gSelected].perks) {
-      data[guildGroup][gSelected].perks.forEach(prk => {
-        result[prk] = {
-          [`${guildGroup}Perk`]: data.perks[prk],
-          ...result[prk],
+    if (data[guildGroup] && data[guildGroup][gSelected].languages) {
+      data[guildGroup][gSelected].languages.forEach(lng => {
+        result[lng] = {
+          [`${guildGroup}Language`]: data.skills.languages[lng],
+          ...result[lng],
         }
       })
     }
     return result;
   }
 
-  mungePerks() {
+  mungeLanguages() {
     const {
       g1Key,
       g2Key,
@@ -64,7 +64,7 @@ class PerkCompareTable extends Component {
     let result = {};
     for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
       const gSelected = guildGroup == `${g1Key}s` ? g1Value : g2Value;
-      result = this.perksToObj({result, guildGroup, gSelected})
+      result = this.languagesToObj({result, guildGroup, gSelected})
     }
     return Object.values(result);
   }
@@ -80,32 +80,32 @@ class PerkCompareTable extends Component {
       classes,
     } = this.props;
 
-    const mungedPerks = this.mungePerks();
+    const mungedLanguages = this.mungeLanguages();
     return (
       <Paper square className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
               <TableCell className={classes.cell}>
-                {g1Label} Perks
+                {g1Label} Languages
               </TableCell>
               <TableCell className={classes.cell}>
-                {g2Label} Perks
+                {g2Label} Languages
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {(!mungedPerks || mungedPerks.length === 0) && (
-              <TableRow key="noPerks">
-                <Typography className={classes.noContent}>Neither group has perks</Typography>
+            {(!mungedLanguages || mungedLanguages.length === 0) && (
+              <TableRow key="noLanguages">
+                <Typography className={classes.noContent}>Neither group has bonus languages</Typography>
               </TableRow>
             )}
-            {mungedPerks && mungedPerks.length > 0  && mungedPerks.map(row => (
+            {mungedLanguages && mungedLanguages.length > 0  && mungedLanguages.map(row => (
               <TableRow key={row.id}>
                 <TableCell className={classes.cell} component="th" scope="row">
-                  {row[`${g1Key}sPerk`]}
+                  {row[`${g1Key}sLanguage`]}
                 </TableCell>
-                <TableCell className={classes.cell}>{row[`${g2Key}sPerk`]}</TableCell>
+                <TableCell className={classes.cell}>{row[`${g2Key}sLanguage`]}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -114,5 +114,5 @@ class PerkCompareTable extends Component {
     );
   }
 }
-export default withStyles(styles)(PerkCompareTable);
+export default withStyles(styles)(LanguageCompareTable);
 

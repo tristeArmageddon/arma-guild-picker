@@ -18,6 +18,7 @@ import Select from '@material-ui/core/Select';
 import Grid from '@material-ui/core/Grid';
 import SkillCompareTable from './SkillCompareTable';
 import PerkCompareTable from './PerkCompareTable';
+import LanguageCompareTable from './LanguageCompareTable';
 
 const styles = (theme) => ({
   container: {
@@ -56,7 +57,7 @@ class GuildPicker extends Component {
     };
     return (
       <>
-        <Grid container justify="center" spacing={6} className={classes.container}>
+        <Grid container justify="center" spacing={16} className={classes.container}>
           <Grid item xs={12} sm={6}>
             <FormHelperText>Guild</FormHelperText>
             <FormControl className={classes.formControl}>
@@ -99,16 +100,25 @@ class GuildPicker extends Component {
             </FormControl>
           </Grid>
         </Grid>
-        <Grid container justify="center" spacing={6} className={classes.container}>
-          <Grid xs={12} sm={6}>
+        <Grid container justify="center" spacing={16} className={classes.container}>
+          <Grid item xs={12} lg={6}>
             <SkillCompareTable
               {...tableConfig}
             />
           </Grid>
-          <Grid xs={12} sm={6}>
-            <PerkCompareTable
-              {...tableConfig}
-            />
+          <Grid item xs={12} lg={6}>
+            <Grid container spacing={16} className={classes.container}>
+              <Grid item xs={12}>
+                <PerkCompareTable
+                  {...tableConfig}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <LanguageCompareTable
+                  {...tableConfig}
+                />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </>

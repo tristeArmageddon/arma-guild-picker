@@ -19,6 +19,7 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = (theme) => ({
   cell: {
+    width: '25%',
     [theme.breakpoints.down('xs')]: {
       padding: 4,
       fontSize: '0.65rem',
