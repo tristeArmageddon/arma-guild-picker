@@ -8,15 +8,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Grid from '@material-ui/core/Grid';
 
 const styles = (theme) => ({
   cell: {
@@ -63,7 +54,7 @@ class LanguageCompareTable extends Component {
 
     let result = {};
     for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
-      const gSelected = guildGroup == `${g1Key}s` ? g1Value : g2Value;
+      const gSelected = guildGroup === `${g1Key}s` ? g1Value : g2Value;
       result = this.languagesToObj({result, guildGroup, gSelected})
     }
     return Object.values(result);
@@ -75,8 +66,6 @@ class LanguageCompareTable extends Component {
       g2Label,
       g1Key,
       g2Key,
-      g1Value,
-      g2Value,
       classes,
     } = this.props;
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Layout from './components/Layout'
-import Index from './components/Index'
 import GuildPicker from './components/GuildPicker'
 import GuildCompare from './components/GuildCompare'
 import SkillPicker from './components/SkillPicker'

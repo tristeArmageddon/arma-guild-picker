@@ -7,15 +7,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Grid from '@material-ui/core/Grid';
 
 const styles = (theme) => ({
   cell: {
@@ -61,8 +52,8 @@ class SkillCompareTable extends Component {
         result[sk] = {
           [`${guildGroup}Skill`]: label,
           [`${guildGroup}SkillLevel`]: proficiency,
+          [`${guildGroup}branchesFrom`]: extended && data[guildGroup][gSelected].branching[sk],
           group,
-          branchesFrom: extended && data[guildGroup][gSelected].branching[sk],
           ...result[sk],
         }
       })
@@ -81,7 +72,7 @@ class SkillCompareTable extends Component {
     let result = {};
     for (let proficiency of data.proficiencies) {
       for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
-        const gSelected = guildGroup == `${g1Key}s` ? g1Value : g2Value;
+        const gSelected = guildGroup === `${g1Key}s` ? g1Value : g2Value;
         for (let extended of [true, false]) {
           result = this.skillsToObj({result, guildGroup, gSelected, proficiency, extended})
         }
@@ -96,8 +87,6 @@ class SkillCompareTable extends Component {
       g2Label,
       g1Key,
       g2Key,
-      g1Value,
-      g2Value,
       classes,
     } = this.props;
     return (
@@ -118,12 +107,26 @@ class SkillCompareTable extends Component {
           <TableBody>
             {this.mungeSkills().map(row => (
               <TableRow key={row.id}>
-                <TableCell className={classes.cell} component="th" scope="row">
+                <TableCell
+                  className={classes.cell}
+                >
                   {row[`${g1Key}sSkill`]}
                 </TableCell>
-                <TableCell className={classes.cell}>{row[`${g1Key}sSkillLevel`]}</TableCell>
-                <TableCell className={classes.cell}>{row[`${g2Key}sSkill`]}</TableCell>
-                <TableCell className={classes.cell}>{row[`${g2Key}sSkillLevel`]}</TableCell>
+                <TableCell
+                  className={classes.cell}
+                >
+                  {row[`${g1Key}sSkillLevel`]}
+                </TableCell>
+                <TableCell
+                  className={classes.cell}
+                >
+                  {row[`${g2Key}sSkill`]}
+                </TableCell>
+                <TableCell
+                  className={classes.cell}
+                >
+                  {row[`${g2Key}sSkillLevel`]}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
