@@ -58,7 +58,8 @@ class SkillCompareTable extends Component {
     gSelected,
     proficiency,
     result = {},
-    extended = false
+    extended = false,
+    gNumber = 1,
   }) {
     const proficiencyKey = `${extended ? 'ex': ''}${proficiency}`;
     if (data[guildGroup] && data[guildGroup][gSelected][proficiencyKey]) {
@@ -68,9 +69,9 @@ class SkillCompareTable extends Component {
           label,
         } = this.findGroupAndLabel(sk);
         result[sk] = {
-          [`${guildGroup}Skill`]: label,
-          [`${guildGroup}SkillLevel`]: proficiency,
-          [`${guildGroup}SkillBranchesFrom`]: extended && data.skills[group][data[guildGroup][gSelected].branching[sk]],
+          [`g${gNumber}Skill`]: label,
+          [`g${gNumber}SkillLevel`]: proficiency,
+          [`g${gNumber}SkillBranchesFrom`]: extended && data.skills[group][data[guildGroup][gSelected].branching[sk]],
           group,
           ...result[sk],
         }
@@ -89,10 +90,12 @@ class SkillCompareTable extends Component {
 
     let result = {};
     for (let proficiency of data.proficiencies) {
-      for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
-        const gSelected = guildGroup === `${g1Key}s` ? g1Value : g2Value;
+      for (var i = 0; i < 2; i++) {
+        const guildGroup = `${i === 0 ? g1Key : g2Key}s`
+        const gSelected = i === 0 ? g1Value : g2Value;
+        const gNumber = i + 1;
         for (let extended of [true, false]) {
-          result = this.skillsToObj({result, guildGroup, gSelected, proficiency, extended})
+          result = this.skillsToObj({result, guildGroup, gSelected, proficiency, extended, gNumber})
         }
       }
     }
@@ -107,7 +110,7 @@ class SkillCompareTable extends Component {
       g2Key,
       classes,
     } = this.props;
-    console.log(this.mungeSkills())
+
     return (
       <Paper square className={classes.root}>
         <Table className={classes.table}>
@@ -129,83 +132,83 @@ class SkillCompareTable extends Component {
                 <TableCell
                   className={classes.cell}
                   style={{
-                    backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                    backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
                 {
-                  row[`${g1Key}sSkillBranchesFrom`] && row[`${g1Key}sSkill`]
+                  row['g1SkillBranchesFrom'] && row['g1Skill']
                   ? (
                     <Tooltip
-                      title={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
-                      aria-label={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                      title={`branches from ${row['g1SkillBranchesFrom']}`}
+                      aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
                     >
                       <div>
-                        {row[`${g1Key}sSkill`]}
+                        {row['g1Skill']}
                       </div>
                     </Tooltip>
-                  ) : row[`${g1Key}sSkill`]
+                  ) : row['g1Skill']
                 }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
                   style={{
-                    backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                    backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
                 {
-                  row[`${g1Key}sSkillBranchesFrom`]
+                  row['g1SkillBranchesFrom']
                   ? (
                     <Tooltip
-                      title={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
-                      aria-label={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                      title={`branches from ${row['g1SkillBranchesFrom']}`}
+                      aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
                     >
                       <div>
-                        {row[`${g1Key}sSkillLevel`]}
-                        {row[`${g1Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                        {row['g1SkillLevel']}
+                        {row['g1SkillBranchesFrom'] && <Chip className={classes.chip} />}
                       </div>
                     </Tooltip>
-                  ) : row[`${g1Key}sSkillLevel`]
+                  ) : row['g1SkillLevel']
                 }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
                   style={{
-                    backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                    backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
                 {
-                  row[`${g2Key}sSkillBranchesFrom`] && row[`${g2Key}sSkill`]
+                  row['g2SkillBranchesFrom'] && row['g2Skill']
                   ? (
                     <Tooltip
-                      title={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
-                      aria-label={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                      title={`branches from ${row['g2SkillBranchesFrom']}`}
+                      aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
                     >
                       <div>
-                        {row[`${g2Key}sSkill`]}
+                        {row['g2Skill']}
                       </div>
                     </Tooltip>
-                  ) : row[`${g2Key}sSkill`]
+                  ) : row['g2Skill']
                 }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
                   style={{
-                    backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                    backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
                 {
-                  row[`${g2Key}sSkillBranchesFrom`]
+                  row['g2SkillBranchesFrom']
                   ? (
                     <Tooltip
-                      title={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
-                      aria-label={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                      title={`branches from ${row['g2SkillBranchesFrom']}`}
+                      aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
                     >
                       <div>
-                        {row[`${g2Key}sSkillLevel`]}
-                        {row[`${g2Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                        {row['g2SkillLevel']}
+                        {row['g2SkillBranchesFrom'] && <Chip className={classes.chip} />}
                       </div>
                     </Tooltip>
-                  ) : row[`${g2Key}sSkillLevel`]
+                  ) : row['g2SkillLevel']
                 }
                 </TableCell>
               </TableRow>

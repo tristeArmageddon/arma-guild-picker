@@ -31,12 +31,13 @@ class LanguageCompareTable extends Component {
   languagesToObj({
     guildGroup,
     gSelected,
+    gNumber = 1,
     result = {},
   }) {
     if (data[guildGroup] && data[guildGroup][gSelected].languages) {
       data[guildGroup][gSelected].languages.forEach(lng => {
         result[lng] = {
-          [`${guildGroup}Language`]: data.skills.languages[lng],
+          [`g${gNumber}Language`]: data.skills.languages[lng],
           ...result[lng],
         }
       })
@@ -53,9 +54,11 @@ class LanguageCompareTable extends Component {
     } = this.props;
 
     let result = {};
-    for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
-      const gSelected = guildGroup === `${g1Key}s` ? g1Value : g2Value;
-      result = this.languagesToObj({result, guildGroup, gSelected})
+      for (var i = 0; i < 2; i++) {
+        const guildGroup = `${i === 0 ? g1Key : g2Key}s`
+        const gSelected = i === 0 ? g1Value : g2Value;
+        const gNumber = i + 1;
+        result = this.languagesToObj({result, guildGroup, gSelected, gNumber})
     }
     return Object.values(result);
   }
@@ -92,9 +95,9 @@ class LanguageCompareTable extends Component {
             {mungedLanguages && mungedLanguages.length > 0  && mungedLanguages.map(row => (
               <TableRow key={row.id}>
                 <TableCell className={classes.cell} component="th" scope="row">
-                  {row[`${g1Key}sLanguage`]}
+                  {row['g1Language']}
                 </TableCell>
-                <TableCell className={classes.cell}>{row[`${g2Key}sLanguage`]}</TableCell>
+                <TableCell className={classes.cell}>{row['g2Language']}</TableCell>
               </TableRow>
             ))}
           </TableBody>

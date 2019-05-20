@@ -31,12 +31,13 @@ class PerkCompareTable extends Component {
   perksToObj({
     guildGroup,
     gSelected,
+    gNumber = 1,
     result = {},
   }) {
     if (data[guildGroup] && data[guildGroup][gSelected].perks) {
       data[guildGroup][gSelected].perks.forEach(prk => {
         result[prk] = {
-          [`${guildGroup}Perk`]: data.perks[prk],
+          [`g${gNumber}Perk`]: data.perks[prk],
           ...result[prk],
         }
       })
@@ -53,9 +54,11 @@ class PerkCompareTable extends Component {
     } = this.props;
 
     let result = {};
-    for (let guildGroup of [`${g1Key}s`, `${g2Key}s`]) {
-      const gSelected = guildGroup === `${g1Key}s` ? g1Value : g2Value;
-      result = this.perksToObj({result, guildGroup, gSelected})
+    for (var i = 0; i < 2; i++) {
+      const guildGroup = `${i === 0 ? g1Key : g2Key}s`
+      const gSelected = i === 0 ? g1Value : g2Value;
+      const gNumber = i + 1;
+      result = this.perksToObj({result, guildGroup, gSelected, gNumber})
     }
     return Object.values(result);
   }
@@ -92,9 +95,9 @@ class PerkCompareTable extends Component {
             {mungedPerks && mungedPerks.length > 0  && mungedPerks.map(row => (
               <TableRow key={row.id}>
                 <TableCell className={classes.cell} component="th" scope="row">
-                  {row[`${g1Key}sPerk`]}
+                  {row['g1Perk']}
                 </TableCell>
-                <TableCell className={classes.cell}>{row[`${g2Key}sPerk`]}</TableCell>
+                <TableCell className={classes.cell}>{row['g2Perk']}</TableCell>
               </TableRow>
             ))}
           </TableBody>
