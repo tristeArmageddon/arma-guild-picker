@@ -10,6 +10,7 @@ const Layout = ({
   const styles = {
     layout: {
       backgroundColor: theme.palette.background.default,
+      overflow: 'hidden'
     }
   }
   return(

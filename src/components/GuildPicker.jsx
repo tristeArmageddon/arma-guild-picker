@@ -1,6 +1,8 @@
 import React, { Component }from 'react'
 import { withStyles } from '@material-ui/core/styles';
+import queryString from 'query-string';
 import data from '../data/data.json'
+import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
@@ -25,8 +27,46 @@ class GuildPicker extends Component {
     subguild: 'hunter',
   }
 
+  componentDidMount() {
+    const {
+      location
+    } = this.props;
+    const {
+      guild,
+      subguild
+    } = queryString.parse(location.search);
+
+    if (data.guilds[guild]) {
+      this.setState({ guild });
+    }
+    if (data.subguilds[subguild]) {
+      this.setState({ subguild });
+    }
+  }
+
   toggleSelection = event => {
     this.setState({ [event.target.name]: event.target.value });
+    const {
+      guild,
+      subguild
+    } = this.state;
+    const newQuery = queryString.stringify({
+      ...{
+        guild,
+        subguild,
+      },
+      [event.target.name]: event.target.value,
+    });
+    const {
+      history,
+      location: {
+        pathname = '/'
+      } = {}
+    } = this.props;
+    history.push({
+      pathname,
+      search: newQuery,
+    })
   }
 
   render() {

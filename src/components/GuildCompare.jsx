@@ -1,5 +1,6 @@
 import React, { Component }from 'react'
 import { withStyles } from '@material-ui/core/styles';
+import queryString from 'query-string';
 import data from '../data/data.json'
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -26,8 +27,46 @@ class GuildCompare extends Component {
     guild2: 'infiltrator',
   }
 
+  componentDidMount() {
+    const {
+      location
+    } = this.props;
+    const {
+      guild1,
+      guild2
+    } = queryString.parse(location.search);
+
+    if (data.guilds[guild1]) {
+      this.setState({ guild1 });
+    }
+    if (data.guilds[guild2]) {
+      this.setState({ guild2 });
+    }
+  }
+
   toggleSelection = event => {
     this.setState({ [event.target.name]: event.target.value });
+    const {
+      guild1,
+      guild2
+    } = this.state;
+    const newQuery = queryString.stringify({
+      ...{
+        guild1,
+        guild2,
+      },
+      [event.target.name]: event.target.value,
+    });
+    const {
+      history,
+      location: {
+        pathname = '/'
+      } = {}
+    } = this.props;
+    history.push({
+      pathname,
+      search: newQuery,
+    })
   }
 
   render() {
@@ -50,7 +89,7 @@ class GuildCompare extends Component {
       <>
         <Grid container justify="center" spacing={16} className={classes.container}>
           <Grid item xs={12} sm={6}>
-            <FormHelperText>Guild</FormHelperText>
+            <FormHelperText>Guild 1</FormHelperText>
             <FormControl className={classes.formControl}>
               <Select
                 value={this.state.guild1}
@@ -70,7 +109,7 @@ class GuildCompare extends Component {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <FormHelperText>Subguild</FormHelperText>
+            <FormHelperText>Guild 2</FormHelperText>
             <FormControl className={classes.formControl}>
               <Select
                 className={classes.select}
