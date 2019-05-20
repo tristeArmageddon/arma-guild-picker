@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Chip from '@material-ui/core/Chip';
 
 const styles = (theme) => ({
   cell: {
@@ -16,9 +17,25 @@ const styles = (theme) => ({
       fontSize: '0.65rem',
       maxWidth: 65,
     },
-    [theme.breakpoints.down('sm')]: {
-      padding: 8,
+    padding: 8,
+  },
+  chip: {
+    backgroundColor: 'rgb(48, 48, 48)',
+    fontSize: 8,
+    marginLeft: 8,
+    padding: 2,
+    height: 16,
+    marginTop: -1,
+    '&> span': {
+      paddingLeft: 4,
+      paddingRight: 4,
     },
+    '&> span::after': {
+      content: '"BRANCH"',
+      [theme.breakpoints.down('xs')]: {
+          content: '"B"',
+      }
+    }
   }
 });
 class SkillCompareTable extends Component {
@@ -52,7 +69,7 @@ class SkillCompareTable extends Component {
         result[sk] = {
           [`${guildGroup}Skill`]: label,
           [`${guildGroup}SkillLevel`]: proficiency,
-          [`${guildGroup}branchesFrom`]: extended && data[guildGroup][gSelected].branching[sk],
+          [`${guildGroup}SkillBranchesFrom`]: extended && data[guildGroup][gSelected].branching[sk],
           group,
           ...result[sk],
         }
@@ -89,6 +106,7 @@ class SkillCompareTable extends Component {
       g2Key,
       classes,
     } = this.props;
+    console.log(this.mungeSkills())
     return (
       <Paper square className={classes.root}>
         <Table className={classes.table}>
@@ -109,23 +127,39 @@ class SkillCompareTable extends Component {
               <TableRow key={row.id}>
                 <TableCell
                   className={classes.cell}
+                  style={{
+                    backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                  }}
                 >
                   {row[`${g1Key}sSkill`]}
                 </TableCell>
                 <TableCell
                   className={classes.cell}
+                  style={{
+                    backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                  }}
                 >
                   {row[`${g1Key}sSkillLevel`]}
+                  {row[`${g1Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
                 </TableCell>
                 <TableCell
                   className={classes.cell}
+                  style={{
+                    backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                  }}
+
                 >
                   {row[`${g2Key}sSkill`]}
                 </TableCell>
                 <TableCell
                   className={classes.cell}
+                  style={{
+                    backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                  }}
+
                 >
                   {row[`${g2Key}sSkillLevel`]}
+                  {row[`${g2Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
                 </TableCell>
               </TableRow>
             ))}
