@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Chip from '@material-ui/core/Chip';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = (theme) => ({
   cell: {
@@ -69,7 +70,7 @@ class SkillCompareTable extends Component {
         result[sk] = {
           [`${guildGroup}Skill`]: label,
           [`${guildGroup}SkillLevel`]: proficiency,
-          [`${guildGroup}SkillBranchesFrom`]: extended && data[guildGroup][gSelected].branching[sk],
+          [`${guildGroup}SkillBranchesFrom`]: extended && data.skills[group][data[guildGroup][gSelected].branching[sk]],
           group,
           ...result[sk],
         }
@@ -131,7 +132,19 @@ class SkillCompareTable extends Component {
                     backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
-                  {row[`${g1Key}sSkill`]}
+                {
+                  row[`${g1Key}sSkillBranchesFrom`] && row[`${g1Key}sSkill`]
+                  ? (
+                    <Tooltip
+                      title={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                      aria-label={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                    >
+                      <div>
+                        {row[`${g1Key}sSkill`]}
+                      </div>
+                    </Tooltip>
+                  ) : row[`${g1Key}sSkill`]
+                }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
@@ -139,27 +152,61 @@ class SkillCompareTable extends Component {
                     backgroundColor: row[`${g1Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
                 >
-                  {row[`${g1Key}sSkillLevel`]}
-                  {row[`${g1Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                {
+                  row[`${g1Key}sSkillBranchesFrom`]
+                  ? (
+                    <Tooltip
+                      title={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                      aria-label={`branches from ${row[`${g1Key}sSkillBranchesFrom`]}`}
+                    >
+                      <div>
+                        {row[`${g1Key}sSkillLevel`]}
+                        {row[`${g1Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                      </div>
+                    </Tooltip>
+                  ) : row[`${g1Key}sSkillLevel`]
+                }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
                   style={{
                     backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
-
                 >
-                  {row[`${g2Key}sSkill`]}
+                {
+                  row[`${g2Key}sSkillBranchesFrom`] && row[`${g2Key}sSkill`]
+                  ? (
+                    <Tooltip
+                      title={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                      aria-label={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                    >
+                      <div>
+                        {row[`${g2Key}sSkill`]}
+                      </div>
+                    </Tooltip>
+                  ) : row[`${g2Key}sSkill`]
+                }
                 </TableCell>
                 <TableCell
                   className={classes.cell}
                   style={{
                     backgroundColor: row[`${g2Key}sSkillBranchesFrom`] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
                   }}
-
                 >
-                  {row[`${g2Key}sSkillLevel`]}
-                  {row[`${g2Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                {
+                  row[`${g2Key}sSkillBranchesFrom`]
+                  ? (
+                    <Tooltip
+                      title={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                      aria-label={`branches from ${row[`${g2Key}sSkillBranchesFrom`]}`}
+                    >
+                      <div>
+                        {row[`${g2Key}sSkillLevel`]}
+                        {row[`${g2Key}sSkillBranchesFrom`] && <Chip className={classes.chip} />}
+                      </div>
+                    </Tooltip>
+                  ) : row[`${g2Key}sSkillLevel`]
+                }
                 </TableCell>
               </TableRow>
             ))}
