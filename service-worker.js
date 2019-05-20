@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/arma-guild-picker/precache-manifest.f6298a8a3c0d280c90d75fc05b83efdb.js"
+  "/arma-guild-picker/precache-manifest.5a2b5e947d2d944cb08de30bce32ff1d.js"
 );
 
 self.addEventListener('message', (event) => {
