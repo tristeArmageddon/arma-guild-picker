@@ -17,6 +17,7 @@ const styles = (theme) => ({
       padding: 4,
       fontSize: '0.65rem',
       maxWidth: 65,
+      paddingRight: '4px !important'
     },
     padding: 8,
   },
@@ -27,9 +28,18 @@ const styles = (theme) => ({
     padding: 2,
     height: 16,
     marginTop: -1,
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: 3,
+      fontSize: 7,
+      height: 13,
+    },
     '&> span': {
       paddingLeft: 4,
       paddingRight: 4,
+      [theme.breakpoints.down('xs')]: {
+        paddingLeft: 2,
+        paddingRight: 2
+      }
     },
     '&> span::after': {
       content: '"BRANCH"',
@@ -139,6 +149,7 @@ class SkillCompareTable extends Component {
                   row['g1SkillBranchesFrom'] && row['g1Skill']
                   ? (
                     <Tooltip
+                      disableFocusListener disableTouchListener 
                       title={`branches from ${row['g1SkillBranchesFrom']}`}
                       aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
                     >
@@ -159,6 +170,7 @@ class SkillCompareTable extends Component {
                   row['g1SkillBranchesFrom']
                   ? (
                     <Tooltip
+                      disableFocusListener disableTouchListener 
                       title={`branches from ${row['g1SkillBranchesFrom']}`}
                       aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
                     >
@@ -180,6 +192,7 @@ class SkillCompareTable extends Component {
                   row['g2SkillBranchesFrom'] && row['g2Skill']
                   ? (
                     <Tooltip
+                      disableFocusListener disableTouchListener 
                       title={`branches from ${row['g2SkillBranchesFrom']}`}
                       aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
                     >
@@ -200,6 +213,7 @@ class SkillCompareTable extends Component {
                   row['g2SkillBranchesFrom']
                   ? (
                     <Tooltip
+                      disableFocusListener disableTouchListener 
                       title={`branches from ${row['g2SkillBranchesFrom']}`}
                       aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
                     >

@@ -16,6 +16,7 @@ const styles = (theme) => ({
       padding: 4,
       fontSize: '0.65rem',
       maxWidth: 65,
+      paddingRight: '4px !important'
     },
     [theme.breakpoints.down('sm')]: {
       padding: 8,
