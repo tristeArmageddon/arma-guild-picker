@@ -21,6 +21,17 @@ const styles = (theme) => ({
     },
     padding: 8,
   },
+  titleCell: {
+    textTransform: 'capitalize',
+    padding: 8,
+    backgroundColor: '#aaaaaa21',
+    [theme.breakpoints.down('xs')]: {
+      padding: 4,
+      fontSize: '0.65rem',
+      maxWidth: 65,
+      paddingRight: '4px !important'
+    },
+  },
   chip: {
     backgroundColor: 'rgb(48, 48, 48)',
     fontSize: 8,
@@ -78,12 +89,13 @@ class SkillCompareTable extends Component {
           group,
           label,
         } = this.findGroupAndLabel(sk);
-        result[sk] = {
+        result[group] = result[group] || {};
+        result[group][sk] = {
           [`g${gNumber}Skill`]: label,
           [`g${gNumber}SkillLevel`]: proficiency,
           [`g${gNumber}SkillBranchesFrom`]: extended && data.skills[group][data[guildGroup][gSelected].branching[sk]],
           group,
-          ...result[sk],
+          ...result[group][sk],
         }
       })
     }
@@ -109,7 +121,7 @@ class SkillCompareTable extends Component {
         }
       }
     }
-    return Object.values(result);
+    return result;
   }
 
   render() {
@@ -120,7 +132,7 @@ class SkillCompareTable extends Component {
       g2Key,
       classes,
     } = this.props;
-
+    const mungedSkills = this.mungeSkills();
     return (
       <Paper square className={classes.root}>
         <Table className={classes.table}>
@@ -137,95 +149,107 @@ class SkillCompareTable extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {this.mungeSkills().map(row => (
-              <TableRow key={row.id}>
-                <TableCell
-                  className={classes.cell}
-                  style={{
-                    backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
-                  }}
-                >
-                {
-                  row['g1SkillBranchesFrom'] && row['g1Skill']
-                  ? (
-                    <Tooltip
-                      disableFocusListener disableTouchListener 
-                      title={`branches from ${row['g1SkillBranchesFrom']}`}
-                      aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
+            {data.skillGroups.map(skillGroup => (
+              <>
+                <TableRow key={skillGroup}>
+                  <TableCell className={classes.titleCell}>
+                    {skillGroup}
+                  </TableCell>
+                  <TableCell className={classes.titleCell} />
+                  <TableCell className={classes.titleCell} />
+                  <TableCell className={classes.titleCell} />
+                </TableRow>
+                {mungedSkills[skillGroup] && Object.values(mungedSkills[skillGroup]).map(row => (
+                  <TableRow key={row.id}>
+                    <TableCell
+                      className={classes.cell}
+                      style={{
+                        backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                      }}
                     >
-                      <div>
-                        {row['g1Skill']}
-                      </div>
-                    </Tooltip>
-                  ) : row['g1Skill']
-                }
-                </TableCell>
-                <TableCell
-                  className={classes.cell}
-                  style={{
-                    backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
-                  }}
-                >
-                {
-                  row['g1SkillBranchesFrom']
-                  ? (
-                    <Tooltip
-                      disableFocusListener disableTouchListener 
-                      title={`branches from ${row['g1SkillBranchesFrom']}`}
-                      aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
+                    {
+                      row['g1SkillBranchesFrom'] && row['g1Skill']
+                      ? (
+                        <Tooltip
+                          disableFocusListener disableTouchListener 
+                          title={`branches from ${row['g1SkillBranchesFrom']}`}
+                          aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
+                        >
+                          <div>
+                            {row['g1Skill']}
+                          </div>
+                        </Tooltip>
+                      ) : row['g1Skill']
+                    }
+                    </TableCell>
+                    <TableCell
+                      className={classes.cell}
+                      style={{
+                        backgroundColor: row['g1SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                      }}
                     >
-                      <div>
-                        {row['g1SkillLevel']}
-                        {row['g1SkillBranchesFrom'] && <Chip className={classes.chip} />}
-                      </div>
-                    </Tooltip>
-                  ) : row['g1SkillLevel']
-                }
-                </TableCell>
-                <TableCell
-                  className={classes.cell}
-                  style={{
-                    backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
-                  }}
-                >
-                {
-                  row['g2SkillBranchesFrom'] && row['g2Skill']
-                  ? (
-                    <Tooltip
-                      disableFocusListener disableTouchListener 
-                      title={`branches from ${row['g2SkillBranchesFrom']}`}
-                      aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
+                    {
+                      row['g1SkillBranchesFrom']
+                      ? (
+                        <Tooltip
+                          disableFocusListener disableTouchListener 
+                          title={`branches from ${row['g1SkillBranchesFrom']}`}
+                          aria-label={`branches from ${row['g1SkillBranchesFrom']}`}
+                        >
+                          <div>
+                            {row['g1SkillLevel']}
+                            {row['g1SkillBranchesFrom'] && <Chip className={classes.chip} />}
+                          </div>
+                        </Tooltip>
+                      ) : row['g1SkillLevel']
+                    }
+                    </TableCell>
+                    <TableCell
+                      className={classes.cell}
+                      style={{
+                        backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                      }}
                     >
-                      <div>
-                        {row['g2Skill']}
-                      </div>
-                    </Tooltip>
-                  ) : row['g2Skill']
-                }
-                </TableCell>
-                <TableCell
-                  className={classes.cell}
-                  style={{
-                    backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
-                  }}
-                >
-                {
-                  row['g2SkillBranchesFrom']
-                  ? (
-                    <Tooltip
-                      disableFocusListener disableTouchListener 
-                      title={`branches from ${row['g2SkillBranchesFrom']}`}
-                      aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
+                    {
+                      row['g2SkillBranchesFrom'] && row['g2Skill']
+                      ? (
+                        <Tooltip
+                          disableFocusListener disableTouchListener 
+                          title={`branches from ${row['g2SkillBranchesFrom']}`}
+                          aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
+                        >
+                          <div>
+                            {row['g2Skill']}
+                          </div>
+                        </Tooltip>
+                      ) : row['g2Skill']
+                    }
+                    </TableCell>
+                    <TableCell
+                      className={classes.cell}
+                      style={{
+                        backgroundColor: row['g2SkillBranchesFrom'] ? 'rgba(255, 236, 179, 0.2)' : 'inherit'
+                      }}
                     >
-                      <div>
-                        {row['g2SkillLevel']}
-                        {row['g2SkillBranchesFrom'] && <Chip className={classes.chip} />}
-                      </div>
-                    </Tooltip>
-                  ) : row['g2SkillLevel']
-                }
-                </TableCell>
-              </TableRow>
+                    {
+                      row['g2SkillBranchesFrom']
+                      ? (
+                        <Tooltip
+                          disableFocusListener disableTouchListener 
+                          title={`branches from ${row['g2SkillBranchesFrom']}`}
+                          aria-label={`branches from ${row['g2SkillBranchesFrom']}`}
+                        >
+                          <div>
+                            {row['g2SkillLevel']}
+                            {row['g2SkillBranchesFrom'] && <Chip className={classes.chip} />}
+                          </div>
+                        </Tooltip>
+                      ) : row['g2SkillLevel']
+                    }
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </>
             ))}
           </TableBody>
         </Table>

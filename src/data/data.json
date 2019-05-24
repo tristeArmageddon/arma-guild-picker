@@ -1,4 +1,14 @@
 {
+  "skillGroups": [
+    "psionics",
+    "combat",
+    "weapons",
+    "stealth",
+    "manipulation",
+    "perception",
+    "crafting",
+    "barter"
+  ],
   "skills": {
     "psionics":{
       "contact":"Contact",
