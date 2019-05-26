@@ -16,6 +16,9 @@ const styles = (theme) => ({
     padding: 20,
     textTransform: 'capitalize',
   },
+  selectedCount: {
+    color: '#ffffff5e'
+  },
   chipContainer: {
     padding: '0 20px'
   },
@@ -28,10 +31,17 @@ class SkillPicker extends Component {
     selectedSkills: [],
   }
 
-  toggleSelection = event => {
+  toggleSelection = (event, skill) => {
     const {
       selectedSkills
     } = this.state;
+    const itemIndex = selectedSkills.indexOf(skill)
+    if (itemIndex === -1) {
+      this.setState({ selectedSkills: [skill, ...selectedSkills]})
+    } else {
+      selectedSkills.splice(itemIndex, 1);
+      this.setState({ selectedSkills: [...selectedSkills]})
+    }
   }
 
   findGuildsForSkills() {
@@ -42,11 +52,18 @@ class SkillPicker extends Component {
     const {
       classes,
     } = this.props;
+    const {
+      selectedSkills,
+    } = this.state;
     return (
       <Grid container justify="center" spacing={16} className={classes.container}>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Paper square>
-            <Typography className={classes.sectionTitle}>Skills</Typography>
+            <Typography className={classes.sectionTitle}>
+              Skills
+              {' '}
+              <span className={classes.selectedCount}>({selectedSkills.length} selected)</span>
+            </Typography>
             {data.skillGroups.map(skillGroup => (
               <>
                 <Typography className={classes.skillGroupTitle}>{skillGroup}</Typography>
@@ -54,8 +71,9 @@ class SkillPicker extends Component {
                   {Object.keys(data.skills[skillGroup]).map((key) => (
                     <Chip
                       className={classes.chip}
-                      data={key}
+                      onClick={(event) => this.toggleSelection(event, key)}
                       label={data.skills[skillGroup][key]}
+                      color={selectedSkills.includes(key) ? 'primary' : ''}
                     />
                   ))}
                 </div>
@@ -63,7 +81,7 @@ class SkillPicker extends Component {
             ))}
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Paper square>
             <Typography className={classes.sectionTitle}>Matching Guild Combinations</Typography>
           </Paper>
