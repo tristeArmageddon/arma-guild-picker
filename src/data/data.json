@@ -998,7 +998,7 @@
       "karma":1,
       "perks":["foragefoodwild","foragefoodcity"],
       "languages":[],
-      "advanced":["huntcity","huntwild","forage","riding","directionsense"],
+      "advanced":["huntcity","huntwild","forage","ride","directionsense"],
       "exadvanced":["climb","search"],
       "branching":{
         "climb":"huntcity",
