@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
 
 const styles = (theme) => ({
   cell: {
@@ -25,7 +26,7 @@ const styles = (theme) => ({
     padding: '1rem',
     textAlign: 'center',
     width: '100%'
-  }
+  },
 });
 class RaceTable extends Component {
   render() {
@@ -44,13 +45,13 @@ class RaceTable extends Component {
                 {selectedRace.label}
               </TableCell>
               <TableCell className={classes.cell}>
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   href={selectedRace.documentation}
                 >
-                  Documentation
-                </a>
+                  Documentation &#8599;
+                </Link>
               </TableCell>
             </TableRow>
           </TableHead>
