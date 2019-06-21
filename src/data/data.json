@@ -888,6 +888,21 @@
       "exapprentice":[],
       "branching":{}
     },
+    "customcrafter":{
+      "label":"Custom Crafter",
+      "karma":0,
+      "perks":["custom"],
+      "languages":[],
+      "mastercraft":[],
+      "master":["toolmaking"],
+      "advanced":[],
+      "journeyman":[],
+      "exmaster":[],
+      "exadvanced":[],
+      "exjourneyman":[],
+      "exapprentice":[],
+      "branching":{}
+    },
     "aggressor":{
       "label":"Aggressor",
       "karma":2,
