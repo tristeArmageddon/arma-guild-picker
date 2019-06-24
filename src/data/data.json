@@ -1304,11 +1304,10 @@
       "journeyman":[],
       "exmaster":[],
       "exadvanced":[],
-      "exjourneyman":["throw","sap"],
+      "exjourneyman":["throw"],
       "exapprentice":[],
       "branching": {
         "throw":"hidecity",
-        "sap":"backstab"
       }
     },
     "masterweaponsmith":{
