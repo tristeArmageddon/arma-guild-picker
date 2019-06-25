@@ -1310,6 +1310,25 @@
         "throw":"hidecity",
       }
     },
+    "cutpurse":{
+      "label":"Cutpurse",
+      "karma":1,
+      "perks":[],
+      "languages":[],
+      "mastercraft":[],
+      "master":[],
+      "advanced":["hidecity","sneakcity","peek","steal"],
+      "journeyman":[],
+      "exmaster":[],
+      "exadvanced":["sap","sleightofhand","scancity"],
+      "exjourneyman":[],
+      "exapprentice":[],
+      "branching": {
+        "sap":"steal",
+        "sleightofhand":"steal",
+        "scancity":"peek"
+      }
+    },
     "masterweaponsmith":{
       "label":"Master Weaponsmith",
       "karma":1,
