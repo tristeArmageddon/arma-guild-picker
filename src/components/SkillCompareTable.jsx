@@ -75,6 +75,16 @@ class SkillCompareTable extends Component {
     }
   }
 
+  findBranchesFrom({extended, sk, guildGroup, gSelected }) {
+    if (!extended) return;
+    const branchesFromSk = data[guildGroup][gSelected].branching[sk];
+    const {
+      group,
+      label,
+    } = this.findGroupAndLabel(branchesFromSk);
+    return data.skills[group][branchesFromSk]
+  }
+
   skillsToObj({
     guildGroup,
     gSelected,
@@ -90,11 +100,12 @@ class SkillCompareTable extends Component {
           group,
           label,
         } = this.findGroupAndLabel(sk);
+
         result[group] = result[group] || {};
         result[group][sk] = {
           [`g${gNumber}Skill`]: label,
           [`g${gNumber}SkillLevel`]: proficiency,
-          [`g${gNumber}SkillBranchesFrom`]: extended && data.skills[group][data[guildGroup][gSelected].branching[sk]],
+          [`g${gNumber}SkillBranchesFrom`]: this.findBranchesFrom({ extended, sk, guildGroup, gSelected }),
           group,
           ...result[group][sk],
         }

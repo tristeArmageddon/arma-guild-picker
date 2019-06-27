@@ -1307,7 +1307,7 @@
       "exjourneyman":["throw"],
       "exapprentice":[],
       "branching": {
-        "throw":"hidecity",
+        "throw":"hidecity"
       }
     },
     "cutpurse":{
