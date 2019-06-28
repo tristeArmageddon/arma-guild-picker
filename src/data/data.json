@@ -144,6 +144,7 @@
     "enforcer":{
       "label":"Enforcer",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Enforcer",
       "perks":[],
       "languages":[],
       "master":["contact","barrier","bash","crossbowuse","flee","guarding","kick","parry","threaten","shielduse","dualwield","twohanded","slashingweapons","piercingweapons","choppingweapons","bludgeoningweapons"],
@@ -169,6 +170,7 @@
     "infiltrator":{
       "label":"Infiltrator",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Infiltrator",
       "perks":["foragefoodcity"],
       "languages":[],
       "mastercraft":[],
@@ -193,6 +195,7 @@
     "miscreant":{
       "label":"Miscreant",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Miscreant",
       "perks":["foragefoodcity"],
       "languages":[],
       "mastercraft":[],
@@ -217,6 +220,7 @@
     "pilferer":{
       "label":"Pilferer",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Pilferer",
       "perks":[],
       "languages":[],
       "master":["contact","barrier","value","clothworking","dyeing","knifemaking","stonecrafting","toolmaking","cooking"],
@@ -244,6 +248,7 @@
     "fence":{
       "label":"Fence",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Fence",
       "perks":["foragefoodcity"],
       "languages":["allundean"],
       "mastercraft":[],
@@ -277,6 +282,7 @@
     "raider":{
       "label":"Raider",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Raider",
       "perks":["hitchdouble"],
       "languages":[],
       "mastercraft":[],
@@ -302,6 +308,7 @@
     "scout":{
       "label":"Scout",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Scout",
       "perks":["tamemount","wildquit","hitchdouble","foragefoodwild","recovery"],
       "languages":[],
       "mastercraft":[],
@@ -328,6 +335,7 @@
     "stalker":{
       "label":"Stalker",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Stalker",
       "perks":["foragefoodwild","wildquit","goodrecovery","hitchdouble","tamemount"],
       "languages":[],
       "mastercraft":[],
@@ -355,6 +363,7 @@
     "adventurer":{
       "label":"Adventurer",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Adventurer",
       "perks":["wildquit","recovery","hitchdouble","tamemount"],
       "languages":[],
       "mastercraft":[],
@@ -384,6 +393,7 @@
     "dunetrader":{
       "label":"Dune Trader",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Dune%20Trader",
       "perks":["foragefoodwild","hitchdouble"],
       "languages":["bendune"],
       "mastercraft":[],
@@ -419,6 +429,7 @@
     "fighter":{
       "label":"Fighter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Dune%20Trader",
       "perks":["alcoholtolerance"],
       "languages":[],
       "mastercraft":[],
@@ -442,6 +453,7 @@
     "soldier":{
       "label":"Soldier",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Soldier",
       "perks":["alcoholtolerance","paintolerance"],
       "languages":[],
       "mastercraft":[],
@@ -468,6 +480,7 @@
     "laborer":{
       "label":"Laborer",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Laborer",
       "perks":["alcoholtolerance","paintolerance"],
       "languages":[],
       "mastercraft":[],
@@ -496,6 +509,7 @@
     "craftsperson":{
       "label":"Craftsperson",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Craftsperson",
       "perks":[],
       "languages":[],
       "master":["contact","barrier","pilot","value","armormaking","bandagemaking","clothworking","dyeing","fletchery","knifemaking","lumberjacking","stonecrafting","toolmaking","woodworking","cooking"],
@@ -524,6 +538,7 @@
     "artisan":{
       "label":"Artisan",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Artisan",
       "perks":[],
       "languages":["cavilish"],
       "mastercraft":[],
