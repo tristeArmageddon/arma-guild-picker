@@ -575,6 +575,7 @@
     "archer":{
       "label":"Archer",
       "karma":0,
+      "documentation":"http://armageddon.org/help/view/Archer",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -590,6 +591,7 @@
     "armormaker":{
       "label":"Armormaker",
       "karma":0,
+      "documentation":"http://armageddon.org/help/view/Armormaker",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -605,6 +607,7 @@
     "bard":{
       "label":"Bard",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Bard",
       "perks":["languagebonus"],
       "languages":[],
       "mastercraft":[],
@@ -620,6 +623,7 @@
     "bountyhunter":{
       "label":"Bounty Hunter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Bounty%20Hunter",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -635,6 +639,7 @@
     "caravanguide":{
       "label":"Caravan Guide",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Caravan%20Guide",
       "perks":[],
       "languages":["bendune"],
       "mastercraft":[],
@@ -650,6 +655,7 @@
     "conartist":{
       "label":"Con Artist",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Con%20Artist",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -665,6 +671,7 @@
     "crafter":{
       "label":"Crafter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Crafter",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -680,6 +687,7 @@
     "forester":{
       "label":"Forester",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Forester",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -693,8 +701,9 @@
       "branching":{}
     },
     "gladiator":{
-      "label":"Gladiator / Pit-fighter",
+      "label":"Gladiator / Pit-Fighter",
       "karma":0,
+      "documentation":"http://armageddon.org/help/view/Pit-Fighterr",
       "perks":["paintolerance"],
       "languages":[],
       "mastercraft":[],
@@ -711,6 +720,7 @@
     "guard":{
       "label":"Guard",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Guard",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -726,6 +736,7 @@
     "houseservant":{
       "label":"House Servant",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/House%20Servant",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -741,6 +752,7 @@
     "hunter":{
       "label":"Hunter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Hunter",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -756,6 +768,7 @@
     "jeweler":{
       "label":"Jeweler",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Jeweler",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -771,6 +784,7 @@
     "linguist":{
       "label":"Linguist",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Linguist",
       "perks":["languagebonus"],
       "languages":["allundean","mirukkim"],
       "mastercraft":[],
@@ -786,6 +800,7 @@
     "mercenary":{
       "label":"Mercenary",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Mercenary",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -801,6 +816,7 @@
     "nomad":{
       "label":"Nomad",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Nomad",
       "perks":[],
       "languages":["bendune"],
       "mastercraft":[],
@@ -816,6 +832,7 @@
     "outlaw":{
       "label":"Outlaw",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Outlaw",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -831,6 +848,7 @@
     "physician":{
       "label":"Physician",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Physician",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -846,6 +864,7 @@
     "tailor":{
       "label":"Tailor",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Tailor",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -861,6 +880,7 @@
     "thief":{
       "label":"Thief",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Thief",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -876,6 +896,7 @@
     "thug":{
       "label":"Thug",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Thug",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -891,6 +912,7 @@
     "weaponscrafter":{
       "label":"Weaponscrafter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Weaponscrafter",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -906,6 +928,7 @@
     "customcrafter":{
       "label":"Custom Crafter",
       "karma":0,
+      "documentation":"https://armageddon.org/help/view/Custom%20Crafter",
       "perks":["custom"],
       "languages":[],
       "mastercraft":[],
@@ -921,6 +944,7 @@
     "aggressor":{
       "label":"Aggressor",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Aggressor",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -940,6 +964,7 @@
     "apothecary":{
       "label":"Apothecary",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Apothecary",
       "perks":[],
       "languages":[],
       "mastercraft":["bandagemaking","floristry"],
@@ -957,6 +982,7 @@
     "berserker":{
       "label":"Berserker",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Berserker",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -976,6 +1002,7 @@
     "bruiser":{
       "label":"Bruiser",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Bruiser",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -995,6 +1022,7 @@
     "lancer":{
       "label":"Lancer",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Lancer",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1014,6 +1042,7 @@
     "majordomo":{
       "label":"Majordomo",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Majordomo",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1029,6 +1058,7 @@
     "grebber": {
       "label":"Grebber",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Grebber",
       "perks":["foragefoodwild","foragefoodcity"],
       "languages":[],
       "advanced":["huntcity","huntwild","forage","ride","directionsense"],
@@ -1042,6 +1072,7 @@
     "masterarmorsmith":{
       "label":"Master Armorsmith",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Armorsmith",
       "perks":[],
       "languages":[],
       "mastercraft":["armormaking","leatherworking"],
@@ -1057,6 +1088,7 @@
     "masterchef":{
       "label":"Master Chef",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Chef",
       "perks":[],
       "languages":[],
       "mastercraft":["cooking"],
@@ -1072,6 +1104,7 @@
     "mastercrafter":{
       "label":"Master Crafter",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Crafter",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1087,6 +1120,7 @@
     "masterjeweler":{
       "label":"Master Jeweler",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Jeweler",
       "perks":[],
       "languages":[],
       "mastercraft":["basketweaving","stonecrafting"],
@@ -1102,6 +1136,7 @@
     "masterpotter":{
       "label":"Master Potter",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Potter",
       "perks":[],
       "languages":[],
       "mastercraft":["clayworking","dyeing"],
@@ -1117,6 +1152,7 @@
     "mastertailor":{
       "label":"Master Tailor",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Tailor",
       "perks":[],
       "languages":[],
       "mastercraft":["clothworking"],
@@ -1132,6 +1168,7 @@
     "mastertrader":{
       "label":"Master Trader",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Trader",
       "perks":[],
       "languages":["cavilish"],
       "mastercraft":[],
@@ -1147,6 +1184,7 @@
     "minstrel":{
       "label":"Minstrel",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Minstrel",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1164,6 +1202,7 @@
     "outdoorsman":{
       "label":"Outdoorsman",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Outdoorsman",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1182,6 +1221,7 @@
     "protector":{
       "label":"Protector",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Protector",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1200,6 +1240,7 @@
     "rogue":{
       "label":"Rogue",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Rogue",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1218,6 +1259,7 @@
     "roughrider":{
       "label":"Roughrider",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Roughrider",
       "perks":["hitchdouble","tamemount"],
       "mastercraft":[],
       "master":[],
@@ -1232,6 +1274,7 @@
     "reaver":{
       "label":"Reaver",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Reaver",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1247,6 +1290,7 @@
     "wastelander":{
       "label":"Wastelander",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Wastelander",
       "perks":["foragefoodwild","wildquit"],
       "languages":["bendune"],
       "mastercraft":[],
@@ -1262,6 +1306,7 @@
     "swordsman":{
       "label":"Swordsman",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Swordsman",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1279,6 +1324,7 @@
     "masterwoodworker":{
       "label":"Master Woodworker",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Woodworker",
       "perks":[],
       "languages":[],
       "mastercraft":["axemaking","clubmaking","woodworking"],
@@ -1294,6 +1340,7 @@
     "marksman":{
       "label":"Marksman",
       "karma":2,
+      "documentation":"https://armageddon.org/help/view/Marksman",
       "perks":[],
       "languages":[],
       "mastercraft":["fletchery","bowmaking"],
@@ -1311,6 +1358,7 @@
     "slipknife":{
       "label":"Slipknife",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Slipknife",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1328,6 +1376,7 @@
     "cutpurse":{
       "label":"Cutpurse",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Cutpurse",
       "perks":[],
       "languages":[],
       "mastercraft":[],
@@ -1347,6 +1396,7 @@
     "masterweaponsmith":{
       "label":"Master Weaponsmith",
       "karma":1,
+      "documentation":"https://armageddon.org/help/view/Master%20Weaponsmith",
       "perks":[],
       "languages":[],
       "mastercraft":["swordmaking","knifemaking","spearmaking","fletchery"],
@@ -1362,6 +1412,7 @@
     "touchedrukkian": {
       "label":"Touched Rukkian",
       "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
       "perks":["foragefoodwild", "rukkian"],
       "languages":[],
       "mastercraft":[],
@@ -1379,6 +1430,7 @@
     "touchedsukkrathi": {
       "label":"Touched Suk-Krathi",
       "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
       "perks":["languagebonus","paintolerance","sukkrathi"],
       "languages":["sirihish","allundean","mirukkim"],
       "master":["cooking"],
@@ -1390,6 +1442,7 @@
     "touchedvivaduan":{
       "label":"Touched Vivaduan",
       "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
       "perks":["vivaduan","alcoholtolerance","foragefoodwild","foragefoodcity"],
       "languages":[],
       "advanced":["bandage","forage"],
@@ -1402,6 +1455,7 @@
     "touchedwhiran":{
       "label":"Touched Whiran",
       "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
       "perks":[],
       "languages":[],
       "advanced":["listencity","listenwild","directionsense"],
