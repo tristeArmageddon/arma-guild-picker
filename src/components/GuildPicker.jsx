@@ -19,7 +19,10 @@ const styles = (theme) => ({
   formControl: {
     width: 'calc(100% - 1rem)',
     marginRight: '1rem',
-  }
+  },
+  link: {
+    color: theme.palette.primary.main,
+  },
 });
 class GuildPicker extends Component {
   state = {
@@ -106,6 +109,16 @@ class GuildPicker extends Component {
                   </MenuItem>
                 ))}
               </Select>
+              <FormHelperText>
+                <span>Documentation: </span>
+                <a
+                  className={classes.link}
+                  href={data.guilds[this.state.guild].documentation}
+                  target="_blank"
+                >
+                  {data.guilds[this.state.guild].documentation}
+                </a>
+              </FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -127,6 +140,16 @@ class GuildPicker extends Component {
                   </MenuItem>
                 ))}
               </Select>
+              <FormHelperText>
+                <span>Documentation: </span>
+                <a
+                  className={classes.link}
+                  href={data.subguilds[this.state.subguild].documentation}
+                  target="_blank"
+                >
+                  {data.subguilds[this.state.subguild].documentation}
+                </a>
+              </FormHelperText>
             </FormControl>
           </Grid>
         </Grid>
