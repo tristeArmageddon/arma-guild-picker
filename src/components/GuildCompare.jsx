@@ -19,7 +19,10 @@ const styles = (theme) => ({
   formControl: {
     width: 'calc(100% - 1rem)',
     marginRight: '1rem',
-  }
+  },
+  link: {
+    color: theme.palette.primary.main,
+  },
 });
 class GuildCompare extends Component {
   state = {
@@ -106,6 +109,16 @@ class GuildCompare extends Component {
                   </MenuItem>
                 ))}
               </Select>
+              <FormHelperText>
+                <span>Documentation: </span>
+                <a
+                  className={classes.link}
+                  href={data.guilds[this.state.guild1].documentation}
+                  target="_blank"
+                >
+                  {data.guilds[this.state.guild1].documentation}
+                </a>
+              </FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -127,6 +140,16 @@ class GuildCompare extends Component {
                   </MenuItem>
                 ))}
               </Select>
+              <FormHelperText>
+                <span>Documentation: </span>
+                <a
+                  className={classes.link}
+                  href={data.guilds[this.state.guild2].documentation}
+                  target="_blank"
+                >
+                  {data.guilds[this.state.guild2].documentation}
+                </a>
+              </FormHelperText>
             </FormControl>
           </Grid>
         </Grid>
