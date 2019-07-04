@@ -1448,7 +1448,7 @@
       "advanced":["bandage","forage"],
       "exadvanced":["brew","floristry"],
       "branching":{
-        "brew":"brandage",
+        "brew":"bandage",
         "floristry":"forage"
       }
     },
