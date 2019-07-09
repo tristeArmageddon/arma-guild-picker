@@ -69,7 +69,7 @@ class SkillCompareTable extends Component {
       if (foundSkill) {
         return {
           group,
-          label: data.skills[group][foundSkill],
+          label: data.skills[group][foundSkill].label,
         }
       }
     }
@@ -82,7 +82,7 @@ class SkillCompareTable extends Component {
       group,
       label,
     } = this.findGroupAndLabel(branchesFromSk);
-    return data.skills[group][branchesFromSk]
+    return data.skills[group][branchesFromSk].label
   }
 
   skillsToObj({

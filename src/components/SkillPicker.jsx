@@ -152,7 +152,7 @@ class SkillPicker extends Component {
                     <Chip
                       className={classes.chip}
                       onClick={(event) => this.toggleSelection(event, key)}
-                      label={data.skills[skillGroup][key]}
+                      label={data.skills[skillGroup][key].label}
                       color={selectedSkills.includes(key) ? 'primary' : ''}
                     />
                   ))}

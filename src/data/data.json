@@ -11,112 +11,382 @@
   ],
   "skills": {
     "psionics":{
-      "contact":"Contact",
-      "barrier":"Barrier",
-      "expel":"Expel"
+      "contact":{
+        "label": "Contact",
+        "documentation":""
+      },
+      "barrier":{
+        "label": "Barrier",
+        "documentation":""
+      },
+      "expel":{
+        "label": "Expel",
+        "documentation":""
+      }
     },
     "combat":{
-      "archery":"Archery",
-      "backstab":"Backstab",
-      "bash":"Bash",
-      "blindfighting":"Blind fighting",
-      "blowgunuse":"Blowguns",
-      "charge":"Charge",
-      "crossbowuse":"Crossbows",
-      "disarm":"Disarm",
-      "dualwield":"Dual wield",
-      "flee":"Flee",
-      "guarding":"Guard",
-      "hack":"Hack",
-      "kick":"Kick",
-      "parry":"Parry",
-      "rescue":"Rescue",
-      "riposte":"Riposte",
-      "sap":"Sap",
-      "slinguse":"Sling use",
-      "shielduse":"Shield use",
-      "subdue":"Subdue",
-      "throw":"Throw",
-      "threaten":"Threaten",
-      "twohanded":"Two handed"
+      "archery":{
+        "label": "Archery",
+        "documentation":""
+      },
+      "backstab":{
+        "label": "Backstab",
+        "documentation":""
+      },
+      "bash":{
+        "label": "Bash",
+        "documentation":""
+      },
+      "blindfighting":{
+        "label": "Blind fighting",
+        "documentation":""
+      },
+      "blowgunuse":{
+        "label": "Blowguns",
+        "documentation":""
+      },
+      "charge":{
+        "label": "Charge",
+        "documentation":""
+      },
+      "crossbowuse":{
+        "label": "Crossbows",
+        "documentation":""
+      },
+      "disarm":{
+        "label": "Disarm",
+        "documentation":""
+      },
+      "dualwield":{
+        "label": "Dual wield",
+        "documentation":""
+      },
+      "flee":{
+        "label": "Flee",
+        "documentation":""
+      },
+      "guarding":{
+        "label": "Guard",
+        "documentation":""
+      },
+      "hack":{
+        "label": "Hack",
+        "documentation":""
+      },
+      "kick":{
+        "label": "Kick",
+        "documentation":""
+      },
+      "parry":{
+        "label": "Parry",
+        "documentation":""
+      },
+      "rescue":{
+        "label": "Rescue",
+        "documentation":""
+      },
+      "riposte":{
+        "label": "Riposte",
+        "documentation":""
+      },
+      "sap":{
+        "label": "Sap",
+        "documentation":""
+      },
+      "slinguse":{
+        "label": "Sling use",
+        "documentation":""
+      },
+      "shielduse":{
+        "label": "Shield use",
+        "documentation":""
+      },
+      "subdue":{
+        "label": "Subdue",
+        "documentation":""
+      },
+      "throw":{
+        "label": "Throw",
+        "documentation":""
+      },
+      "threaten":{
+        "label": "Threaten",
+        "documentation":""
+      },
+      "twohanded":{
+        "label": "Two handed",
+        "documentation":""
+      }
     },
     "weapons":{
-      "bludgeoningweapons":"Bludgeoning",
-      "choppingweapons":"Chopping",
-      "piercingweapons":"Piercing",
-      "slashingweapons":"Slashing"
+      "bludgeoningweapons":{
+        "label": "Bludgeoning",
+        "documentation":""
+      },
+      "choppingweapons":{
+        "label": "Chopping",
+        "documentation":""
+      },
+      "piercingweapons":{
+        "label": "Piercing",
+        "documentation":""
+      },
+      "slashingweapons":{
+        "label": "Slashing",
+        "documentation":""
+      }
     },
     "stealth":{
-      "climb":"Climb",
-      "hidecity":"Hide (City)",
-      "hidewild":"Hide (Wild)",
-      "sneakcity":"Sneak (City)",
-      "sneakwild":"Sneak (Wild)"
+      "climb":{
+        "label": "Climb",
+        "documentation":""
+      },
+      "hidecity":{
+        "label": "Hide (City)",
+        "documentation":""
+      },
+      "hidewild":{
+        "label": "Hide (Wild)",
+        "documentation":""
+      },
+      "sneakcity":{
+        "label": "Sneak (City)",
+        "documentation":""
+      },
+      "sneakwild":{
+        "label": "Sneak (Wild)",
+        "documentation":""
+      }
     },
     "manipulation":{
-      "bandage":"Bandage",
-      "pick":"Pick",
-      "pilot":"Pilot",
-      "poisoning":"Poisoning",
-      "ride":"Ride",
-      "skinning":"Skinning",
-      "sleightofhand":"Sleight of hand",
-      "steal":"Steal"
+      "bandage":{
+        "label": "Bandage",
+        "documentation":""
+      },
+      "pick":{
+        "label": "Pick",
+        "documentation":""
+      },
+      "pilot":{
+        "label": "Pilot",
+        "documentation":""
+      },
+      "poisoning":{
+        "label": "Poisoning",
+        "documentation":""
+      },
+      "ride":{
+        "label": "Ride",
+        "documentation":""
+      },
+      "skinning":{
+        "label": "Skinning",
+        "documentation":""
+      },
+      "sleightofhand":{
+        "label": "Sleight of hand",
+        "documentation":""
+      },
+      "steal":{
+        "label": "Steal",
+        "documentation":""
+      }
     },
     "perception":{
-      "directionsense":"Direction sense",
-      "forage":"Forage",
-      "huntwild":"Hunt (Wild)",
-      "huntcity":"Hunt (City)",
-      "listenwild":"Listen (Wild)",
-      "listencity":"Listen (City)",
-      "peek":"Peek",
-      "scanwild":"Scan (Wild)",
-      "scancity":"Scan (City)",
-      "search":"Search",
-      "watch":"Watch"
+      "directionsense":{
+        "label": "Direction sense",
+        "documentation":""
+      },
+      "forage":{
+        "label": "Forage",
+        "documentation":""
+      },
+      "huntwild":{
+        "label": "Hunt (Wild)",
+        "documentation":""
+      },
+      "huntcity":{
+        "label": "Hunt (City)",
+        "documentation":""
+      },
+      "listenwild":{
+        "label": "Listen (Wild)",
+        "documentation":""
+      },
+      "listencity":{
+        "label": "Listen (City)",
+        "documentation":""
+      },
+      "peek":{
+        "label": "Peek",
+        "documentation":""
+      },
+      "scanwild":{
+        "label": "Scan (Wild)",
+        "documentation":""
+      },
+      "scancity":{
+        "label": "Scan (City)",
+        "documentation":""
+      },
+      "search":{
+        "label": "Search",
+        "documentation":""
+      },
+      "watch":{
+        "label": "Watch",
+        "documentation":""
+      }
     },
     "languages":{
-      "sirihish":"Sirihish",
-      "allundean":"Allundean",
-      "bendune":"Bendune",
-      "cavilish":"Cavilish",
-      "mirukkim":"Mirukkim"
+      "sirihish":{
+        "label": "Sirihish",
+        "documentation":""
+      },
+      "allundean":{
+        "label": "Allundean",
+        "documentation":""
+      },
+      "bendune":{
+        "label": "Bendune",
+        "documentation":""
+      },
+      "cavilish":{
+        "label": "Cavilish",
+        "documentation":""
+      },
+      "mirukkim":{
+        "label": "Mirukkim",
+        "documentation":""
+      }
     },
     "crafting":{
-      "armormaking":"Armor Making",
-      "armorrepair":"Armor Repair",
-      "axemaking":"Axe making",
-      "bandagemaking":"Bandagemaking",
-      "basketweaving":"Basket weaving",
-      "bowmaking":"Bow making",
-      "brew":"Brew",
-      "clayworking":"Clayworking",
-      "clothworking":"Clothworking",
-      "clubmaking":"Club making",
-      "cooking":"Cooking",
-      "dyeing":"Dyeing",
-      "featherworking":"Feather Working",
-      "fletchery":"Fletchery",
-      "floristry":"Floristry",
-      "knifemaking":"Knife making",
-      "instrumentmaking":"Instrument making",
-      "jewelrymaking":"Jewelrymaking",
-      "leatherworking":"Leatherworking",
-      "lumberjacking":"Lumberjacking",
-      "pickmaking":"Pick making",
-      "stonecrafting":"Stonecrafting",
-      "spearmaking":"Spear making",
-      "swordmaking":"Sword making",
-      "tanning":"Tanning",
-      "tentmaking":"Tent making",
-      "toolmaking":"Toolmaking",
-      "wagonmaking":"Wagonmaking",
-      "woodworking":"Woodworking"
+      "armormaking":{
+        "label": "Armor Making",
+        "documentation":""
+      },
+      "armorrepair":{
+        "label": "Armor Repair",
+        "documentation":""
+      },
+      "axemaking":{
+        "label": "Axe making",
+        "documentation":""
+      },
+      "bandagemaking":{
+        "label": "Bandagemaking",
+        "documentation":""
+      },
+      "basketweaving":{
+        "label": "Basket weaving",
+        "documentation":""
+      },
+      "bowmaking":{
+        "label": "Bow making",
+        "documentation":""
+      },
+      "brew":{
+        "label": "Brew",
+        "documentation":""
+      },
+      "clayworking":{
+        "label": "Clayworking",
+        "documentation":""
+      },
+      "clothworking":{
+        "label": "Clothworking",
+        "documentation":""
+      },
+      "clubmaking":{
+        "label": "Club making",
+        "documentation":""
+      },
+      "cooking":{
+        "label": "Cooking",
+        "documentation":""
+      },
+      "dyeing":{
+        "label": "Dyeing",
+        "documentation":""
+      },
+      "featherworking":{
+        "label": "Feather Working",
+        "documentation":""
+      },
+      "fletchery":{
+        "label": "Fletchery",
+        "documentation":""
+      },
+      "floristry":{
+        "label": "Floristry",
+        "documentation":""
+      },
+      "knifemaking":{
+        "label": "Knife making",
+        "documentation":""
+      },
+      "instrumentmaking":{
+        "label": "Instrument making",
+        "documentation":""
+      },
+      "jewelrymaking":{
+        "label": "Jewelrymaking",
+        "documentation":""
+      },
+      "leatherworking":{
+        "label": "Leatherworking",
+        "documentation":""
+      },
+      "lumberjacking":{
+        "label": "Lumberjacking",
+        "documentation":""
+      },
+      "pickmaking":{
+        "label": "Pick making",
+        "documentation":""
+      },
+      "stonecrafting":{
+        "label": "Stonecrafting",
+        "documentation":""
+      },
+      "spearmaking":{
+        "label": "Spear making",
+        "documentation":""
+      },
+      "swordmaking":{
+        "label": "Sword making",
+        "documentation":""
+      },
+      "tanning":{
+        "label": "Tanning",
+        "documentation":""
+      },
+      "tentmaking":{
+        "label": "Tent making",
+        "documentation":""
+      },
+      "toolmaking":{
+        "label": "Toolmaking",
+        "documentation":""
+      },
+      "wagonmaking":{
+        "label": "Wagonmaking",
+        "documentation":""
+      },
+      "woodworking":{
+        "label": "Woodworking",
+        "documentation":""
+      }
     },
     "barter":{
-      "haggle":"Haggle",
-      "value":"Value"
+      "haggle":{
+        "label": "Haggle",
+        "documentation":""
+      },
+      "value":{
+        "label": "Value",
+        "documentation":""
+      }
     }
   },
   "perks": {
