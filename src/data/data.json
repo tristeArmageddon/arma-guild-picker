@@ -1456,7 +1456,7 @@
       "label":"Touched Whiran",
       "karma":1,
       "documentation":"http://armageddon.org/help/view/Touched",
-      "perks":[],
+      "perks":["whiran"],
       "languages":[],
       "advanced":["listencity","listenwild","directionsense"],
       "journeyman":["hidecity","hidewild"],
