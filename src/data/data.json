@@ -446,7 +446,7 @@
     "fighter":{
       "label":"Fighter",
       "karma":0,
-      "documentation":"https://armageddon.org/help/view/Dune%20Trader",
+      "documentation":"https://armageddon.org/help/view/Fighter",
       "perks":["alcoholtolerance"],
       "languages":[],
       "mastercraft":[],
