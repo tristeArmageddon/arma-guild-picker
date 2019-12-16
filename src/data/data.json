@@ -411,6 +411,7 @@
     "whiran": "Whiran (Wind) Magick"
   },
   "sortedguilds": [
+    "-",
     "adventurer",
     "artisan",
     "craftsperson",
@@ -428,6 +429,20 @@
     "stalker"
   ],
   "guilds": {
+    "-":{
+      "label":"-",
+      "karma":0,
+      "documentation":"",
+      "perks":[],
+      "languages":[],
+      "master":[],
+      "advanced":[],
+      "journeyman":[],
+      "exmaster":[],
+      "exadvanced":[],
+      "exjourneyman":[],
+      "branching":{}
+    },
     "enforcer":{
       "label":"Enforcer",
       "karma":0,
@@ -859,6 +874,7 @@
     }
   },
   "sortedsubguilds": [
+    "-",
     "aggressor",
     "apothecary",
     "archer",
@@ -915,6 +931,20 @@
     "weaponscrafter"
   ],
   "subguilds": {
+    "-":{
+      "label":"-",
+      "karma":0,
+      "documentation":"",
+      "perks":[],
+      "languages":[],
+      "master":[],
+      "advanced":[],
+      "journeyman":[],
+      "exmaster":[],
+      "exadvanced":[],
+      "exjourneyman":[],
+      "branching":{}
+    },
     "archer":{
       "label":"Archer",
       "karma":0,
