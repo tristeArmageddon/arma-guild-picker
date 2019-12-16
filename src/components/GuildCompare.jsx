@@ -102,7 +102,7 @@ class GuildCompare extends Component {
                   id: 'guild1-select',
                 }}
               >
-                {Object.keys(data.guilds).map(gKey => (
+                {data.sortedguilds.map(gKey => (
                   <MenuItem value={gKey}>
                     {data.guilds[gKey].label}
                     {data.guilds[gKey].karma ? ` (${data.guilds[gKey].karma})` : ''}
@@ -133,7 +133,7 @@ class GuildCompare extends Component {
                   id: 'guild2-select',
                 }}
               >
-                {Object.keys(data.guilds).map(gKey => (
+                {data.sortedguilds.map(gKey => (
                   <MenuItem value={gKey}>
                     {data.guilds[gKey].label}
                     {data.guilds[gKey].karma ? ` (${data.guilds[gKey].karma})` : ''}

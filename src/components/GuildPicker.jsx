@@ -102,7 +102,7 @@ class GuildPicker extends Component {
                   id: 'guild-select',
                 }}
               >
-                {Object.keys(data.guilds).map(gKey => (
+                {data.sortedguilds.map(gKey => (
                   <MenuItem value={gKey}>
                     {data.guilds[gKey].label}
                     {data.guilds[gKey].karma ? ` (${data.guilds[gKey].karma})` : ''}
@@ -133,10 +133,10 @@ class GuildPicker extends Component {
                   id: 'subguild-select',
                 }}
               >
-                {Object.keys(data.subguilds).map(gKey => (
+                {data.sortedsubguilds.map(gKey => (
                   <MenuItem value={gKey}>
                     {data.subguilds[gKey].label}
-                    {data.subguilds[gKey].karma ? ` (${data.subguilds[gKey].karma})` : ''}
+                    {data.subguilds[gKey].karma ? ` (${data.subguilds[gKey].karma} karma)` : ''}
                   </MenuItem>
                 ))}
               </Select>
