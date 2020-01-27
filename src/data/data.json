@@ -1419,8 +1419,8 @@
       "perks":[],
       "languages":[],
       "mastercraft":[],
-      "master":["listencity","pilot"],
-      "advanced":["guarding","cooking","sleightofhand","watch"],
+      "master":[],
+      "advanced":["pilot","listencity","guarding","cooking","sleightofhand","watch"],
       "journeyman":[],
       "exmaster":[],
       "exadvanced":[],
@@ -1598,16 +1598,17 @@
       "perks":[],
       "languages":[],
       "mastercraft":[],
-      "master":["parry","guarding","shielduse"],
-      "advanced":[],
-      "journeyman":["rescue","bandage"],
+      "master":[],
+      "advanced":["parry","guarding","shielduse"],
+      "journeyman":["rescue"],
       "exmaster":[],
-      "exadvanced":[],
+      "exadvanced":["flee","bandage"],
       "exjourneyman":[],
       "exapprentice":[],
       "branching": {
-        "rescue":"parry",
-        "bandage":"shielduse"
+        "rescue":"guarding",
+        "bandage":"shielduse",
+        "flee":"parry"
       }
     },
     "rogue":{
