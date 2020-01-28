@@ -1737,7 +1737,7 @@
       "languages":[],
       "mastercraft":[],
       "master":[],
-      "advanced":["hidecity","sneakcity","backstab","poisoning"],
+      "advanced":["hidecity","sneakcity","backstab","poisoning","sleightofhand"],
       "journeyman":[],
       "exmaster":[],
       "exadvanced":[],
