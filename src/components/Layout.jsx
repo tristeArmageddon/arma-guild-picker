@@ -9,8 +9,8 @@ const styles = (theme) => ({
     overflow: 'hidden'
   },
   contentWrapper: {
-    [theme.breakpoints.down('xl')]: {
-      maxWidth: 1300,
+    [theme.breakpoints.down('lg')]: {
+      maxWidth: 1100,
       margin: '0 auto'
     }
   }
