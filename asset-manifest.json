@@ -1,15 +1,22 @@
 {
   "files": {
     "main.css": "/arma-guild-picker/static/css/main.6dcaecb9.chunk.css",
-    "main.js": "/arma-guild-picker/static/js/main.9be51d23.chunk.js",
-    "main.js.map": "/arma-guild-picker/static/js/main.9be51d23.chunk.js.map",
-    "runtime~main.js": "/arma-guild-picker/static/js/runtime~main.c1229b97.js",
-    "runtime~main.js.map": "/arma-guild-picker/static/js/runtime~main.c1229b97.js.map",
-    "static/js/2.cc5ab260.chunk.js": "/arma-guild-picker/static/js/2.cc5ab260.chunk.js",
-    "static/js/2.cc5ab260.chunk.js.map": "/arma-guild-picker/static/js/2.cc5ab260.chunk.js.map",
+    "main.js": "/arma-guild-picker/static/js/main.57a7cb44.chunk.js",
+    "main.js.map": "/arma-guild-picker/static/js/main.57a7cb44.chunk.js.map",
+    "runtime-main.js": "/arma-guild-picker/static/js/runtime-main.c28c2ba0.js",
+    "runtime-main.js.map": "/arma-guild-picker/static/js/runtime-main.c28c2ba0.js.map",
+    "static/js/2.813eb276.chunk.js": "/arma-guild-picker/static/js/2.813eb276.chunk.js",
+    "static/js/2.813eb276.chunk.js.map": "/arma-guild-picker/static/js/2.813eb276.chunk.js.map",
     "index.html": "/arma-guild-picker/index.html",
-    "precache-manifest.de916fa48bd2ebbc7aa44327a6f9c6c4.js": "/arma-guild-picker/precache-manifest.de916fa48bd2ebbc7aa44327a6f9c6c4.js",
+    "precache-manifest.86b1ca8808b3d57b8fadd36a12878434.js": "/arma-guild-picker/precache-manifest.86b1ca8808b3d57b8fadd36a12878434.js",
     "service-worker.js": "/arma-guild-picker/service-worker.js",
-    "static/css/main.6dcaecb9.chunk.css.map": "/arma-guild-picker/static/css/main.6dcaecb9.chunk.css.map"
-  }
+    "static/css/main.6dcaecb9.chunk.css.map": "/arma-guild-picker/static/css/main.6dcaecb9.chunk.css.map",
+    "static/js/2.813eb276.chunk.js.LICENSE.txt": "/arma-guild-picker/static/js/2.813eb276.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c28c2ba0.js",
+    "static/js/2.813eb276.chunk.js",
+    "static/css/main.6dcaecb9.chunk.css",
+    "static/js/main.57a7cb44.chunk.js"
+  ]
 }
