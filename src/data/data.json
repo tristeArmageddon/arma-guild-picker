@@ -387,28 +387,87 @@
         "label": "Value",
         "documentation":""
       }
+    },
+    "perks": {
+      "languagebonus":{
+        "label":"Adept at picking up new languages",
+        "documentation":""
+      },
+      "custom":{
+        "label":"Custom Crafting",
+        "documentation":""
+      },
+      "foragefoodwild":{
+        "label":"Forage for food in the wilderness",
+        "documentation":""
+      },
+      "foragefoodcity":{
+        "label":"Forage for scraps in cities",
+        "documentation":""
+      },
+      "recovery":{
+        "label":"Fair recovery from exertion",
+        "documentation":""
+      },
+      "goodrecovery":{
+        "label":"Good recovery from exertion",
+        "documentation":""
+      },
+      "hitchdouble":{
+        "label":"Hitch two mounts",
+        "documentation":""
+      },
+      "alcoholtolerance":{
+        "label":"Increased tolerance for alcohol",
+        "documentation":""
+      },
+      "paintolerance":{
+        "label":"Increased tolerance for pain",
+        "documentation":""
+      },
+      "tamemount":{
+        "label":"May eventually tame mounts",
+        "documentation":""
+      },
+      "wildquit":{
+        "label":"Wilderness quit",
+        "documentation":""
+      },
+      "rukkian":{
+        "label":"Rukkian (Earth) Magick",
+        "documentation":""
+      },
+      "sukkrathi":{
+        "label":"Suk-Krathi (Fire) Magick",
+        "documentation":""
+      },
+      "vivaduan":{
+        "label":"Vivaduan (Water) Magick",
+        "documentation":""
+      },
+      "whiran":{
+        "label":"Whiran (Wind) Magick",
+        "documentation":""
+      }
+    },
+    "otherperks": {
+      "poisontolerance":{
+        "label":"Increased tolerance for poisons",
+        "documentation":""
+      },
+      "magicktolerance":{
+        "label":"Increased tolerance for magick",
+        "documentation":""
+      },
+      "nomount":{
+        "label":"Cannot ride mounts or wagons; better running endurance",
+        "documentation":""
+      },
+      "nomagick":{
+        "label":"Cannot use magick",
+        "documentation":""
+      }
     }
-  },
-  "perks": {
-    "languagebonus":"Adept at picking up new languages",
-    "custom":"Custom Crafting",
-    "foragefoodwild":"Forage for food in the wilderness",
-    "foragefoodcity":"Forage for scraps in cities",
-    "recovery":"Fair recovery from exertion",
-    "goodrecovery":"Good recovery from exertion",
-    "hitchdouble":"Hitch two mounts",
-    "alcoholtolerance":"Increased tolerance for alcohol",
-    "paintolerance":"Increased tolerance for pain",
-    "poisontolerance":"Increased tolerance for poisons",
-    "magicktolerance":"Increased tolerance for magick",
-    "tamemount":"May eventually tame mounts",
-    "nomount":"Cannot ride mounts or wagons; better running endurance",
-    "nomagick":"Cannot use magick",
-    "wildquit":"Wilderness quit",
-    "rukkian": "Rukkian (Earth) Magick",
-    "sukkrathi": "Suk-Krathi (Fire) Magick",
-    "vivaduan": "Vivaduan (Water) Magick",
-    "whiran": "Whiran (Wind) Magick"
   },
   "sortedguilds": [
     "-",

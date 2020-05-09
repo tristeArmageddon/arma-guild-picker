@@ -53,6 +53,7 @@ class SkillPicker extends Component {
           key: guild,
           label: data[guildGroup][guild].label,
           skills: this.flattenGuild(guildGroup, guild),
+          perks: data[guildGroup][guild].perks,
           karma: data[guildGroup][guild].karma,
         });
       }
@@ -98,7 +99,12 @@ class SkillPicker extends Component {
       for (let subguild of this.state.subguilds) {
         let skillsMatched = 0;
         for (let skill of this.state.selectedSkills) {
-          if (guild.skills.includes(skill) || subguild.skills.includes(skill)) {
+          if (
+            guild.skills.includes(skill)
+            || subguild.skills.includes(skill)
+            || guild.perks.includes(skill)
+            || subguild.perks.includes(skill)
+          ) {
             skillsMatched++;
           }
         }
@@ -144,7 +150,7 @@ class SkillPicker extends Component {
                 </Button>)}
               </Grid>
               </Grid>
-            {['languages', ...data.skillGroups].map(skillGroup => (
+            {['languages', 'perks', ...data.skillGroups].map(skillGroup => (
               <>
                 <Typography className={classes.skillGroupTitle}>{skillGroup}</Typography>
                 <div className={classes.chipContainer}>

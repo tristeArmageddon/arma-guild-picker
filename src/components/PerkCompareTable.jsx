@@ -38,7 +38,7 @@ class PerkCompareTable extends Component {
     if (data[guildGroup] && data[guildGroup][gSelected].perks) {
       data[guildGroup][gSelected].perks.forEach(prk => {
         result[prk] = {
-          [`g${gNumber}Perk`]: data.perks[prk],
+          [`g${gNumber}Perk`]: data.skills.perks[prk].label,
           ...result[prk],
         }
       })
