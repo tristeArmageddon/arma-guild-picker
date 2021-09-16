@@ -22,7 +22,7 @@ const styles = (theme) => ({
     padding: '0 20px',
   },
   guildOptionLink: {
-    textDecoration: 'none',
+    color: '#ffffff5e'
   },
   selectedCount: {
     color: '#ffffff5e'
@@ -129,7 +129,7 @@ class SkillPicker extends Component {
       selectedSkills,
     } = this.state;
     return (
-      <Grid container justify="center" spacing={16} className={classes.container}>
+      <Grid container justify="center" spacing={2} className={classes.container}>
         <Grid item xs={12} sm={6}>
           <Paper square>
             <Grid container>
@@ -174,7 +174,7 @@ class SkillPicker extends Component {
               {' '}
               <span className={classes.selectedCount}>(Click to View in Guild Picker)</span>
             </Typography>
-            <Grid container justify="center" spacing={16} className={classes.container}>
+            <Grid container justify="center" spacing={2} className={classes.container}>
               {this.findGuildsForSkills().map(guildCombination => (
                 <Grid item xs={12} sm={6} className={classes.guildOption}>
                   <Link to={guildCombination.linkTo} className={classes.guildOptionLink}>
