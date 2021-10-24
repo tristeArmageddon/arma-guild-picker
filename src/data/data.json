@@ -405,6 +405,14 @@
         "label":"Forage for scraps in cities",
         "documentation":""
       },
+      "rangerridecharge":{
+        "label":"Bonus to ride and charge",
+        "documentation":""
+      },
+      "rangerterrain":{
+        "label":"Bonus navigating difficult terrain",
+        "documentation":""
+      },
       "recovery":{
         "label":"Fair recovery from exertion",
         "documentation":""
@@ -670,7 +678,7 @@
       "label":"Scout",
       "karma":0,
       "documentation":"https://armageddon.org/help/view/Scout",
-      "perks":["tamemount","wildquit","hitchdouble","foragefoodwild","recovery"],
+      "perks":["tamemount","wildquit","hitchdouble","foragefoodwild","recovery","rangerterrain"],
       "languages":[],
       "mastercraft":[],
       "master":["contact","barrier","archery","slinguse","throw","dualwield","twohanded","skinning"],
@@ -697,7 +705,7 @@
       "label":"Stalker",
       "karma":0,
       "documentation":"https://armageddon.org/help/view/Stalker",
-      "perks":["foragefoodwild","wildquit","goodrecovery","hitchdouble","tamemount"],
+      "perks":["foragefoodwild","wildquit","goodrecovery","hitchdouble","tamemount","rangerridecharge","rangerterrain"],
       "languages":[],
       "mastercraft":[],
       "master":["contact","barrier","sneakwild","hidewild","climb","bandage","poisoning","skinning","ride","directionsense","huntwild","listenwild","scanwild","watch","forage"],
@@ -1639,7 +1647,7 @@
       "languages":[],
       "mastercraft":[],
       "master":[],
-      "advanced":["archery","sneakwild","hidewild","skinning","directionsense"],
+      "advanced":["archery","sneakwild","hidewild","skinning","directionsense","rangerterrain"],
       "journeyman":[],
       "exmaster":[],
       "exadvanced":["scanwild"],
