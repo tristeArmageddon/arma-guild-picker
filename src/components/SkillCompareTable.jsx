@@ -146,7 +146,7 @@ class SkillCompareTable extends Component {
     } = this.props;
     const mungedSkills = this.mungeSkills();
     return (
-      <Paper square className={classes.root}>
+      <Paper square elevation={3} m={3} className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
