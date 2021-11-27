@@ -456,6 +456,14 @@
       "whiran":{
         "label":"Whiran (Wind) Magick",
         "documentation":""
+      },
+      "drovian":{
+        "label":"Drovian (Shadow) Magick",
+        "documentation":""
+      },
+      "elkrosian":{
+        "label":"Elkrosian (Electric) Magick",
+        "documentation":""
       }
     },
     "otherperks": {
@@ -994,6 +1002,8 @@
     "touchedsukkrathi",
     "touchedvivaduan",
     "touchedwhiran",
+    "toucheddrovian",
+    "touchedelkrosian",
     "wastelander",
     "weaponscrafter"
   ],
@@ -1907,6 +1917,36 @@
         "scancity":"hidecity",
         "sneakwild":"hidewild",
         "scanwild":"hidewild"
+      }
+    },
+    "toucheddrovian":{
+      "label":"Touched Drovian",
+      "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
+      "perks":["drovian"],
+      "languages":[],
+      "advanced":["hidecity","hidewild","listencity","blindfighting"],
+      "journeyman":[],
+      "exjourneyman":["sneakcity","sneakwild"],
+      "exadvanced":["poisoning"],
+      "branching":{
+          "sneakcity":"hidecity",
+          "sneakwild":"hidewild",
+          "poisoning":"hidecity"
+      }
+    },
+    "touchedelkrosian":{
+      "label":"Touched Elkrosian",
+      "karma":1,
+      "documentation":"http://armageddon.org/help/view/Touched",
+      "perks":["elkrosian","paintolerance"],
+      "languages":[],
+      "advanced":["bash","forage","directionsense"],
+      "journeyman":[],
+      "exadvanced":["huntcity","kick"],
+      "branching":{
+        "huntcity":"forage",
+        "kick":"bash"
       }
     }
   },

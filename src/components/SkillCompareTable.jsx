@@ -63,7 +63,6 @@ const styles = (theme) => ({
 class SkillCompareTable extends Component {
 
   findGroupAndLabel(skillKey) {
-    console.log(skillKey)
     for (let group of Object.keys(data.skills)) {
       const foundSkill = Object.keys(data.skills[group]).find((k) => k === skillKey)
       if (foundSkill) {
