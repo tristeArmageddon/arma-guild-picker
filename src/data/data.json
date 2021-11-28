@@ -1943,9 +1943,9 @@
       "languages":[],
       "advanced":["bash","forage","directionsense"],
       "journeyman":[],
-      "exadvanced":["huntcity","kick"],
+      "exadvanced":["huntwild","kick"],
       "branching":{
-        "huntcity":"forage",
+        "huntwild":"forage",
         "kick":"bash"
       }
     }
