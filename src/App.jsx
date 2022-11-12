@@ -5,9 +5,9 @@ import Layout from './components/Layout'
 import GuildPicker from './components/GuildPicker'
 import GuildCompare from './components/GuildCompare'
 import SkillPicker from './components/SkillPicker'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import themeOverrides from './theme.js';
-const theme = createMuiTheme(themeOverrides);
+const theme = createTheme(themeOverrides);
 
 function App() {
   return (

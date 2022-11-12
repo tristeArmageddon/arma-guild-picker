@@ -112,7 +112,7 @@ const NavBar = ({
         <div className={classes.appBarContainer}>
           <IconButton
             className={classes.menuButton}
-            hidden-lg={true}
+            hidden-lg="true"
             color="inherit"
             aria-label="open drawer"
             edge="end"
@@ -121,7 +121,7 @@ const NavBar = ({
             <MenuIcon />
           </IconButton>
           <Toolbar className={classes.appBar}>
-            <Typography className={classes.appTitle} variant="title" color="inherit">
+            <Typography className={classes.appTitle} variant="h6" color="inherit">
               Armageddon MUD Skills & Guilds
             </Typography>
             <div className={classes.horizontalNavLinks}>

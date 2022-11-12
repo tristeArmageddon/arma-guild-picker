@@ -90,7 +90,7 @@ class GuildCompare extends Component {
     };
     return (
       <>
-        <Grid container justify="center" spacing={16} className={classes.container}>
+        <Grid container justifyContent="center" spacing={16} className={classes.container}>
           <Grid item xs={12} sm={6}>
             <FormHelperText>Guild 1</FormHelperText>
             <FormControl className={classes.formControl}>
@@ -153,7 +153,7 @@ class GuildCompare extends Component {
             </FormControl>
           </Grid>
         </Grid>
-        <Grid container justify="center" spacing={16} className={classes.container}>
+        <Grid container justifyContent="center" spacing={16} className={classes.container}>
           <Grid item xs={12} lg={6}>
             <SkillCompareTable
               {...tableConfig}
