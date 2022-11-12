@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/arma-guild-picker/static/css/main.eba52611.chunk.css",
-    "main.js": "/arma-guild-picker/static/js/main.c51b79f3.chunk.js",
-    "main.js.map": "/arma-guild-picker/static/js/main.c51b79f3.chunk.js.map",
+    "main.js": "/arma-guild-picker/static/js/main.4a39f827.chunk.js",
+    "main.js.map": "/arma-guild-picker/static/js/main.4a39f827.chunk.js.map",
     "runtime-main.js": "/arma-guild-picker/static/js/runtime-main.555154b6.js",
     "runtime-main.js.map": "/arma-guild-picker/static/js/runtime-main.555154b6.js.map",
-    "static/js/2.89beb531.chunk.js": "/arma-guild-picker/static/js/2.89beb531.chunk.js",
-    "static/js/2.89beb531.chunk.js.map": "/arma-guild-picker/static/js/2.89beb531.chunk.js.map",
+    "static/js/2.66efbae4.chunk.js": "/arma-guild-picker/static/js/2.66efbae4.chunk.js",
+    "static/js/2.66efbae4.chunk.js.map": "/arma-guild-picker/static/js/2.66efbae4.chunk.js.map",
     "index.html": "/arma-guild-picker/index.html",
-    "precache-manifest.6f20a7f537ec99c44da3c800c080cae4.js": "/arma-guild-picker/precache-manifest.6f20a7f537ec99c44da3c800c080cae4.js",
+    "precache-manifest.0a859a082c0470c3a476ab04e6cf8045.js": "/arma-guild-picker/precache-manifest.0a859a082c0470c3a476ab04e6cf8045.js",
     "service-worker.js": "/arma-guild-picker/service-worker.js",
     "static/css/main.eba52611.chunk.css.map": "/arma-guild-picker/static/css/main.eba52611.chunk.css.map",
-    "static/js/2.89beb531.chunk.js.LICENSE.txt": "/arma-guild-picker/static/js/2.89beb531.chunk.js.LICENSE.txt"
+    "static/js/2.66efbae4.chunk.js.LICENSE.txt": "/arma-guild-picker/static/js/2.66efbae4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.555154b6.js",
-    "static/js/2.89beb531.chunk.js",
+    "static/js/2.66efbae4.chunk.js",
     "static/css/main.eba52611.chunk.css",
-    "static/js/main.c51b79f3.chunk.js"
+    "static/js/main.4a39f827.chunk.js"
   ]
 }
