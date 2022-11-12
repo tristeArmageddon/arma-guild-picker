@@ -6,7 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
-import { Link } from "react-router-dom";
 
 const styles = (theme) => ({
   layout: {
@@ -65,11 +64,11 @@ const Layout = ({
           <br/>
           <Typography id="modal-modal-description" variant="body" className={classes.bodyText}>
             This tool is no longer maintained. As is well documented on
-            {' '}<Link className={classes.bodyLink} to="https://reddit.com/r/MUD">r/MUD</Link> the staff 
+            {' '}<a className={classes.bodyLink} target="_blank" href="https://reddit.com/r/MUD">r/MUD</a> the staff 
             of Armageddon MUD have a history of being abusive towards players. 
             <br/><br/>
             The creator of this tool now favors a game called 
-            {' '}<Link className={classes.bodyLink} to="https://harshlands.net">Harshlands</Link>, where 
+            {' '}<a className={classes.bodyLink} target="_blank" href="http://harshlands.net/wordpress/">Harshlands</a>, where 
             many former Armageddon MUD players with more sophisitication 
             and integrity than Armageddon MUD staff now play. Come join us!
           </Typography>
