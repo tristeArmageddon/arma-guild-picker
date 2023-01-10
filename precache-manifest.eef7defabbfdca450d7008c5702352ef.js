@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e0c2a34848206c6ce2ee9de492d0364",
+    "revision": "0c9b51da8d569f9213c2cc47f20eb705",
     "url": "/arma-guild-picker/index.html"
   },
   {
-    "revision": "aad2a176a2c485e3c48e",
+    "revision": "a7302dc79d0eefbeea73",
     "url": "/arma-guild-picker/static/css/main.eba52611.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arma-guild-picker/static/js/2.66efbae4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aad2a176a2c485e3c48e",
-    "url": "/arma-guild-picker/static/js/main.177467e0.chunk.js"
+    "revision": "a7302dc79d0eefbeea73",
+    "url": "/arma-guild-picker/static/js/main.8a8e60bf.chunk.js"
   },
   {
     "revision": "1ac762d9aebfcbcff4c7",
