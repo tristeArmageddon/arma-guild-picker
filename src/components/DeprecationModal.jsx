@@ -9,7 +9,7 @@ const styles = (theme) => ({
   modalBody:{
     textAlign: 'center',
     position: 'absolute !important',
-    top: 200,
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '80%',
@@ -23,6 +23,9 @@ const styles = (theme) => ({
   },
   bodyText: {
     size: '1rem'
+  },
+  auRevior: {
+    fontSize: '0.75rem'
   },
   bodyLink: {
     color: 'darkOrange'
@@ -46,18 +49,19 @@ const DeprecationModal = ({
       >
         <Paper square className={classes.modalBody}>
           <Typography id="modal-modal-title" variant="h6">
-            Deprecation Notice - Play Harshlands Instead!
+            Deprecation Notice
           </Typography>
           <br/>
           <Typography id="modal-modal-description" variant="body" className={classes.bodyText}>
-            This tool is no longer maintained. As is well documented on
-            {' '}<a className={classes.bodyLink} target="_blank" href="https://reddit.com/r/MUD">r/MUD</a> the staff 
-            of Armageddon MUD have a history of being abusive towards players. 
-            <br/><br/>
-            The creator of this tool now favors a game called 
-            {' '}<a className={classes.bodyLink} target="_blank" href="http://harshlands.net/wordpress/">Harshlands</a>, where 
-            many former Armageddon MUD players with more sophisitication 
-            and integrity than Armageddon MUD staff now play. Come join us!
+              This tool is no longer maintained. I've passed the torch to a current player working on another guild picker <a className={classes.bodyLink} href="https://harleyndavis.github.io/ArmClassPicker/" target="_blank">here</a> (hosting may change, will try to keep this up to date).
+              <br/>
+              <br/>
+              <p className={classes.auRevior}>
+              Armageddon MUD is a 30-year old telnet based game which was influential to me growing up, but I've quit playing due to disagreements with current staff. Shout out to Sanvean, Calavera, Nauta, ShaLeah, Satansfish, SweetlySiren, Friendly Bee and many other great staff and players I have met either in person or virtually on this game with such an immense legacy. I hope the game becomes an amenable environment to the many great players it has lost so that they might return, and continues to welcome new players. Armageddon is a game far greater than any one set of staff or players involved in it at any given time.
+              <br/>
+              <br/>
+              Another great RPI MUD to consider besides Armageddon is <a className={classes.bodyLink} target="_blank" href="http://harshlands.net/wordpress/">Harshlands</a>, which has a less Dune/Dark Sun like setting and is more classically me<strong>die</strong>val.
+            </p>
           </Typography>
           <br/><br/>
           <div>
